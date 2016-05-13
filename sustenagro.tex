@@ -1,0 +1,315 @@
+%% LyX 2.1.4 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[english]{llncs}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\usepackage{babel}
+
+\makeatother
+
+\usepackage{babel}
+\begin{document}
+
+\title{Ontologies and Domain Specific Language to Support the Decision Making
+in Agricultural Sustainability, SustenAgro case.}
+
+
+\author{John Garavito \and Dilvan Moreira \and Katia Regina \and Ivo Pierozzi}
+
+\maketitle
+Institute of Mathematical and Computer Sciences , São Paulo University,\\
+ Avenida Trabalhador São-carlense, 400 São Carlos - SP, Brazil\\
+
+\begin{abstract}
+Agricultural systems have the need of to measure their sustainability,
+an approach to meet this goal is the use of Indicators of Sustainable
+Development (ISDs), which was used to define the SustenAgro method,
+which purpose is provide sustainability assessment in sugar-cane production
+systems at the center-south of Brazil. 
+
+This paper we present the representation of this method trough of
+two ontologies, the ontology and the decision support ontology which
+represent the domain knowledge and an Domain Specific Language (DSL)
+that manages the knowledge, these elements support the software tool
+entitled SustenAgro presented in this paper and makes it capable to
+work with Semantic Web architecture. \keywords{Indicators of Sustainable
+Development, Sustainability Assesment, Decision Making, Sustainable
+Ontology, User Interface Ontology, Domain Specific Language} 
+\end{abstract}
+
+
+\section{Introduction}
+
+The agricultural sustainability assessment integrates the environmental,
+social and economic dimension of a production system, in the SustenAgro
+project the sugar-cane production system was modeling and systemized,
+allowing improve the sustainability in the farms and plants related
+with sugar-cane production as well as others sub products like sugar,
+bioethanol, yeast, bagasse and electric energy. 
+
+Sustainable Development in this context, is the base to serve the
+present needs without compromise the future generations to supplement
+their needs\cite{brundtland1987our}, taking into account the sustainability
+dimensions: environmental, social and economic \cite{alkan2009goal}.
+Due to complexity of this process is necessary to define metrics that
+quantify the sustainability.
+
+About the sustenagro project was led and executed by Embrapa Environment,
+and generated the base knowledge and the indicators which support
+the assessment process and the development of SustenAgro Software, 
+
+The objetive of this paper is presents the semantic web based solution
+for support the sustainability assessment process in sugarcane and
+represent the experts knowledge in a computable format. 
+
+Indicators represent the critic information about the system, which
+is possible to take immediate problems or prevent future problems,
+the base of this paper was an research who identify and define the
+indicators of sustainability\cite{brunooliveira2013}, ), this indicators
+was used as conceptual raw material.\textit{ (os indicadores representam
+a informação crítica sobre o sistema, o que é possível resolver os
+problemas imediatos ou evitar problemas futuros, a base deste trabalho
+foi uma pesquisa que identificou e definiu os indicadores de sustentabilidade
+(oliveira cardoso, 2013), estes indicadores foram utilizados como
+conceitual matéria-prima.) }
+
+We utilize an agile method to create the ontology, we adapt this method
+to facilitate to make this work with a team. To create we make daily
+reunions and adapt the knowledge to a conceptual map. We propose work
+this way because the experts have no knowledge about the tools to
+create ontologies and to make an easy communication.
+
+This ontology is a part of an project called SustenAgro, this project
+proposes the creation of a computational system whose objective is
+evaluate the sustainability in production of sugarcane and soy in
+center-south of Brazil. Is important to create an ontology because
+of the diversity of team; it\textquoteright s support to equalize
+the knowledge of experts; and to support the computational system
+whose will be based on semantic web technologies. 
+
+Due to the diversity and the changing nature of the indicators, the
+construction of a methodology for the evaluation sustainability and
+the requirement to have a massive system of data collection, was necessary
+to analyze the technological possibilities to provide an architecture
+and information retrieval system to deal with said requirements. It
+was decided to implement an information retrieval system based on
+triplestore, which needs the development of a titled ontology.
+
+The agricultural systems involve environmental, social and economic
+aspects, which require a full understanding and inter-disciplinary
+field, is given complexity of the phenomenon arises the need to maintain
+a conceptual basis to organize and represent the concepts used by
+the team of experts and the systems computer.
+
+Specifically the area of knowledge of SustenAgro Ontology seeks support
+concepts that are constantly changing, for example in the process
+of \textquotedbl{}sustainability assessment\textquotedbl{} the indicators
+and indexes are continuously redefined.
+
+The hypothesis that we want to validate is if SustenAgro Ontology
+will support conceptual and technologically representing the domain
+that is in continuous change, the methodology for evaluating sustainability
+and a software system information retrieval.
+
+O fornecimento de um metodo de avaliação da sustenabilidade em agricultura
+é uma necessidade latente. Pelo qual pesquisadores da Embrapa Meio
+Ambiente desenvolveram um metodologia de avaliação da sustentabilidade
+intitulada 'Metodo SustenAgro' focado em uma cultura e regiao especifica
+do Brasil que permita integrar o conhecimento relacionado com a sustentabilidade
+e fornecer uma medição dele para ter uma metrica da sustentabilidade
+e gerar recomendações para veicular estrategias de melhora da sustentabilidada,
+além de posibilitar a informção base para a formulação de politicas
+publicas.
+
+Embrapa meio ambiente
+
+Suportar um metodo de avaliação da sustentabilidade 
+
+farmers and stakeholders
+
+
+\section{The problem}
+
+
+\section{Architecture.}
+
+O sistema software abrange tecnologias da web semantica que permitem
+representar o conhecimento de uma forma estructurada por meio de ontologias
+que
+
+
+\section{Methodology.}
+
+The development of ontology is responsive type by techniques of rapid
+prototyping of coverage and increased complexity, starting with the
+most relevant components of the model to the experts and incorporating
+each one of the other components by validations, this method was cyclical
+obtaining in each cycle ontology prototypes.
+
+Among them are the conceptual maps that allow a focused communication
+in the field of specialist, in order to represent knowledge of a visual
+way and we also have the computational models in semantic web formats
+that allow communication with experts in modeling of knowledge.
+
+After having the conceptual model well-defined, modelers represented
+this model in OWL-DL standard and popular data storage system, after
+that the expert built questions that were asked in the system, and
+it generated the expected results, then follows a validation phase,
+integration and adjustment, which ended with a reliable prototype
+that represents an ontology sector, this process will be repeated
+until you have all sectors of interest and the required integrity.
+
+The methodology includes the following steps that will represent the
+domain knowledge, the process corresponds to a cyclical methodology,
+which will be added sectors according to the maturation of the terms
+and the need of the information contained:
+\begin{enumerate}
+\item Definition of entities
+\item Definition of ratings
+\item Definition of semantic relations
+\item Definition the rules and axioms
+\item Implementation in OWL
+\item Instantiation of individuals
+\item Construction of questions
+\item Validation through consultation
+\item Adjustments and integration
+\end{enumerate}
+This process is not necessarily linear, as moderators can return to
+the previous steps as necessary..
+
+The figure 1 represents how is the methodology and how we work cyclic
+and circular with it.
+
+The modules that were addressed in the modeling are, in order of development:
+\begin{enumerate}
+\item Module attributes and data from production plants of sugarcane
+\item Module assessment of sustainability indicators in sugarcane systems
+\item Module representation of sustainability assessment methodology
+\item Module georeferencing connection with the supply of natural resources
+data.
+\end{enumerate}
+
+\section{Development and Tests}
+
+
+\section{Related work}
+
+
+\subsection{Agricultural Area}
+
+This part describes the pappers that were relevant to the knowledge
+in agriculture.
+
+It is necessary for a standardized ontology using techniques which
+make it multilingual so that it can be used without the need for adjustments
+to researchers from anywhere.
+
+The papper\cite{lauser2006agrovoc} describes a technique that uses
+the AGROVOC multilingual Theasaurus for conversion into an ontology
+and also covers the concepts of agriculture that are a focus of the
+work, so we analyzed the techniques used to adapt to our ontology.
+
+
+\subsection{Sustainability Area}
+
+This part describes the pappers that were relevant to the knowledge
+in the area of sustainability.
+
+For evaluation of sustainability requires working with indicators
+that measure how each practice is sustainable. In the paper\cite{brilhante2006information}
+describes an sustainable analysis framework of Amazonas state and
+is developed an ontology of these indicators that work in conjunction
+with the framework. The last foundation for this work was extremely
+important for the development done. Our ontology is based on agricultural
+system, the focus on sustainability help to amplify the knowledge
+and how to make it computational.
+
+The ontology must be flexible to some extent to accept changes according
+to the need of the specialist. The concepts presented by\cite{kraines2011system}
+gave an idea of how to make flexible ontology in the area of sustainability
+so that it can support new concepts and still not miss the formality
+or allow the ambiguous concepts. In this way, we adapt this concepts
+and make it in ours.
+
+To describe the sustainability of a clearer and adaptively is important
+to understand several indicators that are used in several different
+places.\cite{wilson2007contrasting} makes a comparison between sustainability
+indicators going through in most of it, analyzing global metrics and
+interpreting sustainability among nations, through a clear notion
+of sustainability to support knowledge used in the ontology. 
+
+
+\subsection{Ontologies Area}
+
+In this part of the pappers that were relevant to the knowledge in
+the area of development of ontologies in general are described.
+
+For a good ontology is important that the concepts are well defined
+and for this and necessary to use techniques to detect semantic conflicts.\cite{alcaraz2010detection}
+defines how to assemble senarios in order to detect conflicts or problems
+that may have been made in the creation of ontology, the techniques
+described can be considered as a kind of reasoning that detects situations
+that was not explicit in the ontology. With this and other pappers
+related to sustainability we can disambiguate and ensure the concepts
+are consistent and follow the expert needs.
+
+For development of an ontology is important to understand the concepts
+involved and needs to create an ontology.\cite{wen2007event} describes
+about ontologies in computer science and generalized terms that are
+needed for development of ontologies, these terms were extremely important
+for all stages of creation and analysis of ontology. We do patterns
+in links between classes to try make more consistent the ontology.
+
+
+\subsection{Conceptual basis of ontology}
+
+\cite{brunooliveira2013} was taken as the basis of knowledge and
+was chosen by the domain expert. Was taken all the knowledge base
+that was used as the indicators and the needs of each and still had
+part of integrated sustainability directly with the part of agriculture
+geared to the location of the state of São Paulo. It was analyzed
+with all the parts described in the dissertation by selecting indicators
+previously validated by a group of experts. 
+
+
+\subsection{Related Technologies}
+
+In order to eliminate ambiguity in semantic understanding and making
+mining the relationship between the concepts of knowledge in agriculture,
+should be combined with the knowledge among heterogeneous databases.
+
+It proposes a Agricultural Knowledge Grid\cite{cuiping2013agricultural}
+which was built with three layers \textquotedbl{}Resource Layer\textquotedbl{},
+\textquotedbl{}Semantic Layer\textquotedbl{} and \textquotedbl{}User
+Layer\textquotedbl{}, has been applied to \textquotedbl{}Semantic
+Extension on Retrieval\textquotedbl{}, \textquotedbl{}Knowledge links\textquotedbl{}
+and \textquotedbl{}Experience\textquotedbl{} to deepen \textquotedbl{}Agricultural
+Knowledge Services\textquotedbl{}.
+
+AGROVOC is a controlled vocabulary that covers all areas of interest
+FAO and consists of 32,000 concepts available in 21 languages, this
+tool is used by researchers, librarians and information managers to
+index, retrieve and organize data in agricultural information systems.
+
+\cite{lauser2006agrovoc} is an initiative that serves as a reference
+in structuring and standardization of agricultural terminology in
+multiple languages for use systems in agriculture, the purpose of
+this technology is to achieve more interoperability between agricultural
+systems.
+
+
+\section{Results}
+
+
+\section{Discussion}
+
+
+\section{Conclusions}
+
+\bibliographystyle{plain}
+\bibliography{sustenagro}
+
+\end{document}

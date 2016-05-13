@@ -1,0 +1,83 @@
+%% LyX 2.1.4 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[english]{llncs}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{textcomp}
+\usepackage{babel}
+\usepackage{url}
+\urldef{\mailsa}\path|{alfred.hofmann, ursula.barth, ingrid.haas, frank.holzwarth,|
+\urldef{\mailsb}\path|anna.kramer, leonie.kunz, christine.reiss, nicole.sator,|
+\urldef{\mailsc}\path|erika.siebert-cole, peter.strasser, lncs}@springer.com|  
+
+
+
+\begin{document}
+
+\title{Ontologies and Domain Specific Language to Support the Decision Making
+in Agricultural Sustainability, SustenAgro case.}
+
+
+\author{John Garavito \and Dilvan Moreira \and Katia Regina \and Ivo Pierozzi}
+
+
+\institute{Institute of Mathematical and Computer Sciences , São Paulo University,\\
+ Avenida Trabalhador São-carlense, 400 São Carlos - SP, Brazil}
+\mailsa
+\mailsb
+\mailsc
+
+
+\maketitle
+Embrapa Environment, Brazilian Agricultural Research Corporation,\\
+ Rod. SP 340, km 127,5, Jaguariúna, SP - Brazil\\
+Embrapa Agriculture Informatics, Brazilian Agricultural Research Corporation,\\
+ Av. André Tosello, nº 209 Campus da Unicamp, Barão Geraldo, Campinas,
+SP - Brazil\\
+
+
+
+\email{john.gar.sua@usp.br}
+\begin{abstract}
+Ferramenta software para a avaliação da sustentabilidade de sistemas
+de produção de cana-de-açúcar na região Centro-Sul do Brasil 
+
+Embrapa meio ambiente
+
+Suportar um metodo de avaliação da sustentabilidade
+\end{abstract}
+
+Keywords. Sustainability
+
+
+\section{Introdução}
+
+O fornecimento de um metodo de avaliação da sustenabilidade em agricultura
+é uma necessidade latente. Pelo qual pesquisadores da Embrapa Meio
+Ambiente desenvolveram um metodologia de avaliação da sustentabilidade
+intitulada 'Metodo SustenAgro' focado em uma cultura e regiao especifica
+do Brasil que permita integrar o conhecimento relacionado com a sustentabilidade
+e fornecer uma medição dele para ter uma metrica da sustentabilidade
+e gerar recomendações para veicular estrategias de melhora da sustentabilidada,
+além de posibilitar a informção base para a formulação de politicas
+publicas.
+
+
+\section{Arquitetura do sistema software.}
+
+O sistema software abrange tecnologias da web semantica que permitem
+representar o conhecimento de uma forma estructurada por meio de ontologias
+que 
+
+
+\section{Desenvolvimento}
+
+
+\section{Testes}
+
+
+\section{Contribuções}
+
+
+\section{Referencias}
+\end{document}
