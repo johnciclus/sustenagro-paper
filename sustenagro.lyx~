@@ -73,8 +73,8 @@
 \begin_body
 
 \begin_layout Title
-Ontologies and Domain Specific Language to Support the Decision Making in
- Agricultural Sustainability, SustenAgro case.
+SustenAgro a Decision Support System for Agricultural Sustainability based
+ on Domain Specific Language and Ontologies.
 \end_layout
 
 \begin_layout Author
@@ -92,6 +92,20 @@ and
 \end_inset
 
  Dilvan Moreira 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+and
+\end_layout
+
+\end_inset
+
+ Sergio A.
+ Torquato 
 \begin_inset ERT
 status open
 
@@ -146,6 +160,7 @@ lity and an approach to achieve this goal is the use of Sustainable Indicators
  domain knowledge, both based on Semantic Web technologies.
  This association proposes an architecture to implement and manage Decision
  Making Systems like SustenAgro Software.
+ 
 \end_layout
 
 \begin_layout Abstract
@@ -182,100 +197,109 @@ Introduction
 \end_layout
 
 \begin_layout Standard
-The Sustenagro Project was led and executed by Embrapa Environment, and
- generated the knowledge base and the indicators which support the assessment
- process and the development of SustenAgro Software, the objective of this
- paper is presents the semantic web based solution for support the sustainabilit
-y assessment process in sugarcane and represent the agriculture sustainability
- knowledge in a computable format.
+The definition of a sustainability assessment method in agriculture is a
+ latent requirement.
+ Whereby, researchers of Embrapa Environment and scientific partners developed
+ a sustainability assessment method, entitled SustenAgro Method.
+ It focuses on the sugarcane production system in the center-south region
+ of Brazil.
+ This method allows the scientific community to integrate knowledge, related
+ to sustainability, providing metrics and generating recommendations or
+ strategies to improve sustainability.
+ It also can be used to enable public policies formulation.
+\end_layout
+
+\begin_layout Standard
+Sustainability assessment involves many environmental, social and economic
+ aspects [alkan2009goal].
+ From this natural complexity arises the need to maintain a formal conceptual
+ basis to organize and represent the knowledge concepts used by the team
+ of experts.
+ An ontology, a formal way to define the structure of knowledge for a domain,
+ can be used to formalize these knowledge concepts.
+ An ontology is a formal naming and definition of the types, properties,
+ and interrelationships of the entities that exist in a particular domain.
+\end_layout
+
+\begin_layout Standard
+The SustenAgro Method uses an ontology to represent knowledge about sustainabili
+ty in sugarcane.
+ In this ontology, indicators are used to represent and measure complex
+ aspects of sugarcane agricultural sustainability.
+ They try to synthesise information about critical aspects of an agricultural
+ production system.
+ The scientific basis for the creation of SustenAgro's indicators was research,
+ carried out by Embrapa Environment [brunooliveira2013], to identify and
+ define sustainability indicators for sugarcane production units (farms
+ and production plants).
+ Indicators have values, generally categorical, to indicate their status.
+ For instance, … .
+ The method combines indicator values, using formulas and weights, to calculate
+ two key indexes for sugarcane production units: the sustainability and
+ efficiency indexes.
+ The values of these indexes reflect a trade off between sustainability
+ and efficiency and are used to determine which recommendations will be
+ offered.
+ Users should use the indexes and recommendations to develop their own strategie
+s to increase sustainability in their production units.
+ The SustenAgro Method was planned to be implemented as a web application
+ and be available online for users.
+ In a traditional development cycle, Embrapa Environment would hire a web
+ developer contractor and give him mockups of the interfaces they wanted
+ and the formulas they developed.
+ Embrapa had, in the past, many problems with this development model.
+ At this stage, the SustenAgro Method is just a plan with some formulas
+ written in an Excel spreadsheet.
+ A first system is designed after many trials and errors.
+ Contractors are not domain experts on sustainability and that can lead
+ to many errors and delays.
+ After the first system is running, users will express their views, indicators
+ may have to be redesigned, there will be changes to the ontology, etc.
+ A modified system will have to be created and that can be repeated a number
+ of time.
+ Each cycle will be slow and expensive.
+\end_layout
+
+\begin_layout Standard
+A better solution would be a system where domain experts can directly express
+ the ontology, they already created for SustenAgro, the formulas, to calculate
+ the indexes, and their recommendations in a machine readable format.
+\end_layout
+
+\begin_layout Standard
+In this paper, we present how the SustenAgro System, a web-based Decision
+ Support System (DSS) for the SustenAgro method, allow domain experts to
+ create, by themselves, their ontologies, formulas and recommendations.
+ It uses a Domain Specific Language (DSL) and graphic user interfaces specially
+ designed for the use of domain experts.
+ Using just the ontology and DSL programs, entered by the domain expert,
+ the SustenAgro system is capable to automatically generate the application's
+ user interface, get answers from logged users, calculate the indexes and
+ show graphics and recommendations.
+\end_layout
+
+\begin_layout Standard
+This approach allows a faster development cycle for SustenAgro applications.
+ Domain experts have to learn to use the system and its associated DSL,
+ but after that they can implement changes immediately (at runtime).
+ The DSLs are compact and easy to learn [resultado???].
  
 \end_layout
 
 \begin_layout Standard
-Indicators represent the critic information about the system, which is possible
- to take immediate problems or prevent future problems, the base of this
- paper was an research that identified and defined the indicators of sustainabil
-ity
-\begin_inset CommandInset citation
-LatexCommand cite
-key "brunooliveira2013"
-
-\end_inset
-
-, these indicators were used as conceptual raw material.
-
-\shape italic
- 
-\end_layout
-
-\begin_layout Standard
-We utilize an agile method to define the ontology, we adapt this method
- to facilitate this work with a team.
- We made frequent meetings to adapt the knowledge and we represent it in
- a conceptual map.
- This strategy allows define the main concepts by experts without knowledge
- about the tools to create ontologies and to facilitate the communication.
-\end_layout
-
-\begin_layout Standard
-These ontologies are part of the SustenAgro Project, that integrates the
- development of a computational system based on semantic web technologies
- whose objective is evaluate the sustainability in production of sugarcane
- in center-south of Brazil.
-\end_layout
-
-\begin_layout Standard
-The agricultural systems involve environmental, social and economic aspects
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "alkan2009goal"
-
-\end_inset
-
-, which require a full understanding and inter-disciplinary field, is given
- complexity of the phenomenon arises the need to maintain a conceptual basis
- to organize and represent the concepts used by the team of experts and
- the systems computer, in the case of SustenAgro project the production
- system is sugarcane and it was modeled and systemized, allowing to measure
- and improve the sustainability in the farms and plants related with sugarcane
- production and others sub products like sugar, bioethanol, yeast, bagasse
- and electric energy.
- 
-\end_layout
-
-\begin_layout Standard
-The SustenAgro Ontology support concepts that are constantly changing, for
- example in the process of "sustainability assessment" the indicators and
- indexes are continuously redefined, for this reason a software feature
- the flexibility.
-\end_layout
-
-\begin_layout Standard
-The hypothesis that we validated was if SustenAgro Ontology will support
- the conceptual and technologically representation the domain that constantly
- changing, the methodology for evaluating sustainability and a software
- system information retrieval.
-\end_layout
-
-\begin_layout Standard
-The definition of an sustainability assessment method in agriculture is
- a
-\end_layout
-
-\begin_layout Standard
-O fornecimento de um metodo de avaliação da sustenabilidade em agricultura
- is a latent requirement.
- Whereby researchers of Environmental Embrapa developed a sustainability
- assessment method entiled SustenAgro Method focused on a culture and particular
- region of Brazil, that allows you to integrate knowledge related to sustainabil
-ity, provide metrics and generate recomendations to serve strategies to
- improve sustainability, besides enabling the information base for the formulati
-on of public policies.
+[DESCRICAO DO RESTO do paper]
 \end_layout
 
 \begin_layout Section
-The problem.
+Ontologies.
+\end_layout
+
+\begin_layout Section
+DSL
+\end_layout
+
+\begin_layout Section
+Architeture 
 \end_layout
 
 \begin_layout Standard
@@ -296,10 +320,6 @@ Este problema foi identificado em varias ferramentas software da Embrapa
 \begin_layout Standard
 Uma característica essencial deste problema é que a informação é complexa
  e muda continuamente.
-\end_layout
-
-\begin_layout Section
-Architecture.
 \end_layout
 
 \begin_layout Standard
@@ -1266,7 +1286,7 @@ e, the purpose of this technology is to achieve more interoperability between
 \end_layout
 
 \begin_layout Section
-Results
+Results and Discussion
 \end_layout
 
 \begin_layout Standard
