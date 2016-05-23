@@ -129,18 +129,26 @@ Institute of Mathematical and Computer Sciences , São Paulo University,
 \end_layout
 
 \begin_layout Abstract
-Agricultural systems have the need of to measure their sustainability, an
- approach to meet this goal is the use of Indicators of Sustainable Development
- (ISDs), which was used to define the SustenAgro method, which purpose is
- provide sustainability assessment in sugar-cane production systems at the
- center-south of Brazil.
- This paper we present the representation of this method trough of two ontologie
-s, the sugarcane ISDs ontology and the decision support ontology which represent
- the domain knowledge and an Domain Specific Language (DSL) that manages
- the knowledge, these elements support the software tool entitled SustenAgro
- presented in this paper and makes it capable to work with Semantic Web
- architecture.
- 
+Agricultural production systems have the need of measurement of their sustainabi
+lity and an approach to achieve this goal is the use of Sustainable Indicators
+ (ISDs).
+ Aiming to develop a new methodology and a software that are able to assess
+ the sustainability of Sugarcance production system in Brazil was develop
+ the SustenAgro Project.
+ The main challenge of this goal was the formulation of specific indicators
+ of the sustainability considering the complexity and diversity of agricultural
+ scenario in this country.
+ In this purpose, the use of Ontologies represents the indicators and organizes
+ the information as the basis for SustenAgro Software in a better and accurate
+ way than others Knowledge Organization Systems.
+ This paper we present two ontologies and the Domain Specific Language (DSL)
+ that in association support the decision making process and represent the
+ domain knowledge, both based on Semantic Web technologies.
+ This association proposes an architecture to implement and manage Decision
+ Making Systems like SustenAgro Software.
+\end_layout
+
+\begin_layout Abstract
 \begin_inset ERT
 status open
 
@@ -153,8 +161,8 @@ keywords{
 
 \end_inset
 
-Indicators of Sustainable Development, Sustainability Assesment, Decision
- Making, Sustainable Ontology, User Interface Ontology, Domain Specific
+Indicators of Agricultural Sustainability, Sustainability Assessment, Decision
+ Making System, Sustainable Ontology, User Interface Ontology, Domain Specific
  Language
 \begin_inset ERT
 status open
@@ -171,6 +179,19 @@ status open
 
 \begin_layout Section
 Introduction
+\end_layout
+
+\begin_layout Standard
+The definition of a sustainability assessment method in agriculture is a
+ latent requirement.
+ Whereby, researchers of Embrapa Environment and scientific partners developed
+ a sustainability assessment method, entitled SustenAgro Method.
+ It focuses on the sugarcane production system in the center-south region
+ of Brazil.
+ This method allows the scientific community to integrate knowledge, related
+ to sustainability, providing metrics and generating recommendations or
+ strategies to improve sustainability.
+ It also can be used to enable public policies formulation.
 \end_layout
 
 \begin_layout Standard
@@ -586,52 +607,6 @@ The environmental, economic and social dimensions were divided into attributes
 \end_layout
 
 \begin_layout Standard
-Conceptual map of the economic dimension in Figure 3, is important to know
- that the production system needs to be sustainable in three dimensions
- and not only in one dimension, the economic dimension sometimes is most
- analyzed but is not the most important:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename images/DimensaoEconomica.png
-	lyxscale 15
-	scale 50
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Mapa conceitual da Dimensão Econômica
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Each of these dimensions are linked through the fundamental concepts of
- ontologies that are represented in the figure 4.
-\end_layout
-
-\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
@@ -641,7 +616,7 @@ status open
 \begin_inset Graphics
 	filename images/PartePrincipal.png
 	lyxscale 15
-	scale 50
+	scale 45
 
 \end_inset
 
@@ -677,7 +652,7 @@ After modeling the phenomenon through the conceptual map, became a translation
 \end_layout
 
 \begin_layout Standard
-Figure 5 represents the dimension class in Protege:
+Figure 4 represents the dimension class in Protege:
 \end_layout
 
 \begin_layout Standard
@@ -715,7 +690,7 @@ Classe Dimension
 \end_layout
 
 \begin_layout Standard
-Figure 6 represents the attribute class in Protege:
+Figure 5 represents the attribute class in Protege:
 \end_layout
 
 \begin_layout Standard
@@ -786,8 +761,119 @@ Domain Specific Language
 
 \begin_layout Standard
 A administração das ontologias é realizado por meio de um lenguagen specifico
- para uso especialistas em sustenatabilidade que permite gerenciar os principais
- conceitos das ontologias para definir o comportamento deles no 
+ de dominio destinado para uso dos especialistas em sustenatabilidade que
+ permite gerenciar os principais conceitos das ontologias para definir o
+ comportamento deles no processo de calculo dos resultados e na apresentação
+ da interface grafica, uma visualização deste lenguage é apresentada na
+ figura 6.
+\end_layout
+
+\begin_layout Standard
+Esta linguagem permite:
+\end_layout
+
+\begin_layout Standard
+Definir objetos de avaliação: são os elementos que serão evaluados na avaliação,
+ no caso de SustenAgro seram as unidades produtivas ou fazendas que vão
+ ficar cadastradas no sistema e sobre as quais serão feitas as avaliações,
+ a DSL fornece esta funcionalidade por meio do comando evaluationObject
+ que recebe a URI da classe que vai ser nesta instrução são definidas as
+ propiedades que compõem o objeto de avaliação, para deninir no sistema
+ a estrutura do objeto.
+\end_layout
+
+\begin_layout Standard
+O algoritmo 1 tem as instruções 
+\end_layout
+
+\begin_layout Standard
+Instance: define uma propiedade para o objeto de avaliação, essa instrução
+ recebe como primeiro parametro a URI da propiedade da ontologia que permite
+ mapear a estrutura da propiedade e asism definir o comportamento do objeto
+ em relação a dita propiedade definida e um label para usar onde for necessario,
+ como é nas interfaces graficas.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+evaluationObject ':ProductionUnit', {
+\end_layout
+
+\begin_layout Plain Layout
+instance 'ui:hasName', label: "Nome da unidade produtiva ou fazenda"
+\end_layout
+
+\begin_layout Plain Layout
+instance ':hasAgriculturalProductionSystem', label: "Sistema de produção
+ agrícola"
+\end_layout
+
+\begin_layout Plain Layout
+type label: "Tipo da unidade produtiva"
+\end_layout
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Definição de um objeto de avaliação na DSL
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/SustenAgro-dsl-editor.png
+	scale 40
+	rotateAngle 90
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+SustenAgro domain Specific Language
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -853,8 +939,133 @@ Nesta tela o usuário pode ver a informação geral do aplicativo, criar uma
 \end_layout
 
 \begin_layout Standard
-A partir do ingreso o usuário pode selecionar o botão de avaliação que permite
+A partir do ingreso o usuário pode seleccionar o menu avaliação e escolher
+ entre cadastrar uma nova unidade produtiva ou realizar uma avaliação de
+ sustentabilidade, como é apresentado na tela da figura 8.
  
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/SustenAgro-tool.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Cadastro de nova unidade produtiva/Fazenda
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Uma vez cadastrada a unidade produtiva/fazenda disponibiliza-se a opção
+ de criar nova avaliação, ação que vai gerar a tela da figura 9 que permite
+ visualizar as variaveis de eficiencia e os indicadores para que os usuários
+ preencham cada uma segundo a realidade da unidade produtiva em avaliação,
+ cada indicador ou variavel de eficiencia tem varias opções que estão ligadas
+ a valores que quantificam a sustentabilidade, esses valores estão definidos
+ na ontologia da sustentabilidade e serao os valores de ingreso para a formula
+ que vai gerar os indices da sustentabilidade.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/SustenAgro-scenario.png
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Cadastro das variaveis/indicadores
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A partir desses desses dados cadastrados são gerados os resultados do sistema
+ que consistem na planilha de ediciência e custo, na planilha da sustentabilidad
+e e o relatorio do sistema, as planilhas permitem a visualizar os atributos
+ das variveis de eficiência e dos indicadores e a tela de relatorio que
+ apresenta a matrix de avaliação onde são relaciondas as variaveis de eficiência
+ e de sustentabilidade, o relatio é apresentado na figura 10.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/SustenAgro-analyses.png
+	scale 35
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Formato das planilhas de resultado
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
