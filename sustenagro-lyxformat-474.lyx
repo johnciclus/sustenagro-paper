@@ -1,9 +1,7 @@
-#LyX 2.2 created this file. For more info see http://www.lyx.org/
-\lyxformat 508
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
 \begin_document
 \begin_header
-\save_transient_properties true
-\origin unavailable
 \textclass llncs
 \begin_preamble
 \usepackage{babel}
@@ -14,16 +12,16 @@
 \language_package default
 \inputencoding iso8859-15
 \fontencoding T1
-\font_roman "default" "default"
-\font_sans "default" "default"
-\font_typewriter "default" "default"
-\font_math "auto" "auto"
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
-\font_sf_scale 100 100
-\font_tt_scale 100 100
+\font_sf_scale 100
+\font_tt_scale 100
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -307,85 +305,6 @@ This approach allows a faster development cycle for SustenAgro applications.
 
 \begin_layout Section
 Ontologies.
-\end_layout
-
-\begin_layout Standard
-As ontologias suportam a representação e organização do conhecimento, permitindo
- a integração de conceitos, inclusive quando pertencem a domínios sem relação
- aparente.
- No sistema SustenAgro foi necessário inter-relacionar conhecimento de sustentab
-ilidade com o conhecimento de interfaces gráficas de usuário, para suportar
- o processo de geração de SAD para avaliação da sustentabilidade, o conhecimento
- modelado foi dividido em duas ontologias, avaliação de sustentabilidade
- e SAD.
-\end_layout
-
-\begin_layout Standard
-Ontologia sobre avaliação da sustentabilidade:
-\end_layout
-
-\begin_layout Standard
-Na.
- Figura 1 é apresentada a modelagem de Production Unit, feita na ferramenta
- Protégé.
- 
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename images/ProductionUnit.png
-	scale 60
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Modelagem Production Unit
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Figura 1: modelagem do conceito Production Unit
-\end_layout
-
-\begin_layout Standard
-O conceito ‘Unidade produtiva’, representa as organizações em avaliação,
- atualmente podem ser ‘Fornecedores de cana-de-açúcar’ e / ou ‘Usinas processado
-ras de cana-de-açúcar’, em cada processo de avaliação da sustentabilidade
- são pedidos dados que conformam as unidades produtivas, e assim conseguir
- definir as propriedades de cada unidade produtiva, atualmente foram definidas
- um conjunto de propriedades obrigatórias como:
-\end_layout
-
-\begin_layout Standard
-Name: define o nome da unidade produtiva Harvest year: define o ano da safra.
- Agricultural Production System: relaciona o sistema de produção agrícola
- em avaliação.
- Has microregion: relaciona a microrregião da unidade produtiva Has state:
- relaciona o estado Brasileiro Availability of evaluation results: relaciona
- o tipo de disponibilização dos resultados.
- Sugarcane source: Relaciona a origem da cana 
 \end_layout
 
 \begin_layout Section
