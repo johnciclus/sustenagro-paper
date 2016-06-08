@@ -310,25 +310,59 @@ Ontologies.
 \end_layout
 
 \begin_layout Standard
-As ontologias suportam a representação e organização do conhecimento, permitindo
- a integração de conceitos, inclusive quando pertencem a domínios sem relação
- aparente.
- No sistema SustenAgro foi necessário inter-relacionar conhecimento de sustentab
-ilidade com o conhecimento de interfaces gráficas de usuário, para suportar
- o processo de geração de SAD para avaliação da sustentabilidade, o conhecimento
- modelado foi dividido em duas ontologias, avaliação de sustentabilidade
- e SAD.
+Ontologies support the representation and organization of knowledge, allowing
+ the concepts integration, even when they belong to domains without apparent
+ relationship.
+ For example in the SustenAgro system was necessary interrelate sustainability
+ knowledge with graphical user interfaces knowledge, to support the generation
+ of Decision Support Systems (DSS) for sustainability assessment, the model
+ knowledge was divided into two ontologies, SustenAgro Ontology and SAD
+ ontology.
+\end_layout
+
+\begin_layout Subsection
+SustenAgro Ontology
 \end_layout
 
 \begin_layout Standard
-Ontologia sobre avaliação da sustentabilidade:
+SustenAgro ontology represents the base knowledge to carry out a sustainability
+ assessment, it is composed of several fundamental concepts such as Production
+ Unit, Indicator, Variable, Value, Microregion, and so forth.
+ Which are integrated and related to represent the sustainability assessment
+ in sugar-cane domain, below are presented the main concepts of this ontology.
 \end_layout
 
 \begin_layout Standard
-Na.
- Figura 1 é apresentada a modelagem de Production Unit, feita na ferramenta
- Protégé.
+Production Unit concept, represents the organization's that can be evaluated
+ by the SustenAgro system to obtain a sustainability measure, currently
+ can be sugar-cane providers and / or sugar-cane processing plants, each
+ assessment process requires data that defines the Production Units through
+ the properties that make up, exits a set of required properties such as:
+\end_layout
+
+\begin_layout Standard
+Name: define the name of the production unit 
+\end_layout
+
+\begin_layout Standard
+Harvest year: define the year of harvest 
+\end_layout
+
+\begin_layout Standard
+Agricultural production system: relates the agricultural production system
+ under evaluation.
  
+\end_layout
+
+\begin_layout Standard
+Has microregion: relates the microregion of the production unit 
+\end_layout
+
+\begin_layout Standard
+Has state:relates the Brazilian state 
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
