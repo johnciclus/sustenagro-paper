@@ -400,26 +400,91 @@ Modelagem Production Unit
 \end_layout
 
 \begin_layout Standard
-Figura 1: modelagem do conceito Production Unit
+Indicator and Variable classes represents the characteristics of the Production
+ Units which will be identified and quantified in each assessment process,
+ they have a Value that quantifies them, this property along with other
+ conform a format that allows identify and manage such elements.
+ Figure 2 presents the modeling of Indicator entitled Absolute Emissions
+ Of Greenhouse Gases which presents the relevance annotation and has value
+ property which establish the format of an Indicator.
 \end_layout
 
 \begin_layout Standard
-O conceito ‘Unidade produtiva’, representa as organizações em avaliação,
- atualmente podem ser ‘Fornecedores de cana-de-açúcar’ e / ou ‘Usinas processado
-ras de cana-de-açúcar’, em cada processo de avaliação da sustentabilidade
- são pedidos dados que conformam as unidades produtivas, e assim conseguir
- definir as propriedades de cada unidade produtiva, atualmente foram definidas
- um conjunto de propriedades obrigatórias como:
+Figure 2 Modeling of Indicator
 \end_layout
 
 \begin_layout Standard
-Name: define o nome da unidade produtiva Harvest year: define o ano da safra.
- Agricultural Production System: relaciona o sistema de produção agrícola
- em avaliação.
- Has microregion: relaciona a microrregião da unidade produtiva Has state:
- relaciona o estado Brasileiro Availability of evaluation results: relaciona
- o tipo de disponibilização dos resultados.
- Sugarcane source: Relaciona a origem da cana 
+Variable class also presents the features of Production Units which to quantify
+ them through the has value property and can have a optional has weight
+ which relates a weight by the end user to attribute the importance of each
+ feature according to Production Unit assessed.
+\end_layout
+
+\begin_layout Standard
+Figure 3 represents the hierarchical structure of variables and a variable
+ Adequacy of boilers which has the two properties described above
+\end_layout
+
+\begin_layout Standard
+Figure 3 Modeling of Variable class
+\end_layout
+
+\begin_layout Standard
+State and microregion classes represent the places where production units
+ are located, allowing to define the state and the microregion for the farms
+ and plants related with sugar-cane, currently the SustenAgro system has
+ 7 states that belong to the center-south of Brazil and 243 microregions
+ within the registered states, these data were semantically queried and
+ integrated in the system from a query on DBpedia.
+\end_layout
+
+\begin_layout Standard
+Figure 4 represents a modeling of geographic locations used in the SustenAgro
+ system, with some instances of microregión.
+\end_layout
+
+\begin_layout Standard
+Figure 4 Modeling of Microregion class
+\end_layout
+
+\begin_layout Standard
+From the previous classes was possible to develop the data model in format
+ of web semantic ontologies OWL, the classes were related through Object
+ Properties and Data properties that allow to link syntactically the associated
+ classes in the evaluation of sustainability.
+\end_layout
+
+\begin_layout Standard
+Data and Object properties must have set the rdfs:range to accomplish the
+ validation of related classes and some are functional to ensure a relation
+ one-to-one.
+\end_layout
+
+\begin_layout Standard
+DSS Ontology
+\end_layout
+
+\begin_layout Standard
+Decision support system ontology contains the elements that were abstracted
+ from the analysis of DSS systems used by Embrapa Environment in their assessmen
+t processes.
+\end_layout
+
+\begin_layout Standard
+The assessment software systems which were analysed are: SustenAgro system:
+ assessment of agricultural sustainability in sugarcane.
+ Innova-Tec system: assessment of technological innovation impact.
+ Nano-Tec system: assessment of nanotechnological impact.
+\end_layout
+
+\begin_layout Standard
+From these systems were identified common elements, which were abstracted
+ in the SAD ontology with the purpose to generalize the classes of sustenagro
+ ontology, to provide the generation of graphical interfaces.
+\end_layout
+
+\begin_layout Standard
+The identified and modeled classes are: 
 \end_layout
 
 \begin_layout Section
