@@ -158,6 +158,7 @@
   year={2002},
   publisher={PUC}
 }
+
 @article{gruber1993translation,
   title={A translation approach to portable ontology specifications},
   author={Gruber, Thomas R},
@@ -168,16 +169,66 @@
   year={1993},
   publisher={Elsevier}
 }
+
 @misc{noy2001ontology,
   title={Ontology development 101: A guide to creating your first ontology},
   author={Noy, Natalya F and McGuinness, Deborah L and others},
   year={2001},
   publisher={Stanford knowledge systems laboratory technical report KSL-01-05 and Stanford medical informatics technical report SMI-2001-0880}
 }
+
 @book{simon1982models,
   title={Models of bounded rationality: Empirically grounded economic reason},
   author={Simon, Herbert Alexander},
   volume={3},
   year={1982},
   publisher={MIT press}
+}
+
+@article{alcaraz2010detection,
+  title={Detection of semantic conflicts in ontology and rule-based information systems},
+  author={Alcaraz Calero, Jose M and Mar{\'\i}n P{\'e}rez, Juan M and Bernal Bernab{\'e}, Jorge and Garcia Clemente, Felix J and Mart{\'\i}nez P{\'e}rez, Gregorio and G{\'o}mez Skarmeta, Antonio F},
+  journal={Data \& Knowledge Engineering},
+  volume={69},
+  number={11},
+  pages={1117--1137},
+  year={2010},
+  publisher={Elsevier}
+}
+
+@inproceedings{wen2007event,
+  title={Event-based knowledge acquisition for ontology learning},
+  author={Wen, Zhou and Zongtian, Liu and Ying, Liu and Yan, Zhao},
+  booktitle={6th IEEE International Conference on Cognitive Informatics},
+  pages={498--501},
+  year={2007}
+}
+
+@article{cuiping2013agricultural,
+  title={Agricultural Knowledge Grid Construction},
+  author={Cuiping, Tan and Huaiguo, Zheng and Junfeng, Zhang and Sufen, Sun and Guangda, Li},
+  journal={TELKOMNIKA Indonesian Journal of Electrical Engineering},
+  volume={11},
+  number={9},
+  pages={5224--5228},
+  year={2013}
+}
+
+@inproceedings{lauser2006agrovoc,
+  title={From AGROVOC to the Agricultural Ontology Service/Concept Server. An OWL model for creating ontologies in the agricultural domain},
+  author={Lauser, Boris and Sini, Margerita and Liang, Anita and Keizer, Johannes and Katz, Stephen},
+  booktitle={Dublin Core Conference Proceedings},
+  year={2006},
+  organization={Dublin Core DCMI}
+}
+
+@article{gallopin1996environmental,
+  title={Environmental and sustainability indicators and the concept of situational indicators. A systems approach},
+  author={Gallop{\'\i}n, Gilberto C},
+  journal={Environmental modeling \& assessment},
+  volume={1},
+  number={3},
+  pages={101--117},
+  year={1996},
+  publisher={Springer}
 }

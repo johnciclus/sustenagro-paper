@@ -145,22 +145,22 @@ Institute of Mathematical and Computer Sciences , São Paulo University,
 \end_layout
 
 \begin_layout Abstract
-Agricultural production systems have the need of measurement of their sustainabi
-lity and an approach to achieve this goal is the use of Sustainable Indicators
- (ISDs).
- Aiming to develop a new methodology and a software that are able to assess
- the sustainability of Sugarcance production system in Brazil was develop
- the SustenAgro Project.
- The main challenge of this goal was the formulation of specific indicators
- of the sustainability considering the complexity and diversity of agricultural
- scenario in this country.
- In this purpose, the use of Ontologies represents the indicators and organizes
- the information as the basis for SustenAgro Software in a better and accurate
- way than others Knowledge Organization Systems.
- This paper we present two ontologies and the Domain Specific Language (DSL)
- that in association support the decision making process and represent the
- domain knowledge, both based on Semantic Web technologies.
- This association proposes an architecture to implement and manage Decision
+Agricultural production systems have the need of measuring sustainability,
+ an approach to achieve this goal is the use of Sustainable Indicators (ISDs).
+ With the aiming to develop a new methodology and a software system that
+ are able to access the sustainability of Sugarcance production system in
+ Brazil, was developed the SustenAgro Project.
+ The main challenge was the formulation of specific sustainability indicators
+ considering the complexity and diversity of agricultural scenario in this
+ country.
+ This propose uses Ontologies to represent indicators and organize the informati
+on as the base for SustenAgro.
+ his Project shows better and accurate results in comparison with others
+ Knowledge Organization Systems used in the área.
+ In this paper we present two ontologies and a Domain Specific Language
+ (DSL) associated that support the decision making process and represent
+ the domain knowledge, both based on Semantic Web technologies.
+ This association proposes an architecture to implement and a manage Decision
  Making Systems like SustenAgro Software.
  
 \end_layout
@@ -199,8 +199,8 @@ Introduction
 \end_layout
 
 \begin_layout Standard
-The definition of a sustainability assessment method in agriculture is a
- latent requirement.
+The development of a sustainability assessment method in agriculture is
+ a latent requirement.
  Whereby, researchers of Embrapa Environment and scientific partners developed
  a sustainability assessment method, entitled SustenAgro Method.
  It focuses on the sugarcane production system in the center-south region
@@ -209,6 +209,7 @@ The definition of a sustainability assessment method in agriculture is a
  to sustainability, providing metrics and generating recommendations or
  strategies to improve sustainability.
  It also can be used to enable public policies formulation.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -228,6 +229,7 @@ key "alkan2009goal"
  can be used to formalize these knowledge concepts.
  An ontology is a formal naming and definition of the types, properties,
  and interrelationships of the entities that exist in a particular domain.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -238,17 +240,11 @@ ty in sugarcane.
  They try to synthesise information about critical aspects of an agricultural
  production system.
  The scientific basis for the creation of SustenAgro's indicators was research,
- carried out by Embrapa Environment
-\begin_inset CommandInset citation
-LatexCommand cite
-key "brunooliveira2013"
-
-\end_inset
-
-, to identify and define sustainability indicators for sugarcane production
- units (farms and production plants).
+ carried out by Embrapa Environment, to identify and define sustainability
+ indicators for sugarcane production units (farms and production plants).
  Indicators have values, generally categorical, to indicate their status.
- For instance, … .
+ For instance, such as biodiversity, soil fertility, water resources, among
+ others.
  The method combines indicator values, using formulas and weights, to calculate
  two key indexes for sugarcane production units: the sustainability and
  efficiency indexes.
@@ -256,15 +252,20 @@ key "brunooliveira2013"
  and efficiency and are used to determine which recommendations will be
  offered.
  Users should use the indexes and recommendations to develop their own strategie
-s to increase sustainability in their production units.
- The SustenAgro Method was planned to be implemented as a web application
+s to increase sustainability in their production units.They are important
+ to measure critical situations to prevent future problems.
+ 
+\end_layout
+
+\begin_layout Standard
+The SustenAgro Method was planned to be implemented as a web application
  and be available online for users.
  In a traditional development cycle, Embrapa Environment would hire a web
  developer contractor and give him mockups of the interfaces they wanted
  and the formulas they developed.
  Embrapa had, in the past, many problems with this development model.
- At this stage, the SustenAgro Method is just a plan with some formulas
- written in an Excel spreadsheet.
+ At this stage, the SustenAgro Method is just a plan with some mockups in
+ PPT and formulas written in an Excel spreadsheet.
  A first system is designed after many trials and errors.
  Contractors are not domain experts on sustainability and that can lead
  to many errors and delays.
@@ -273,12 +274,14 @@ s to increase sustainability in their production units.
  A modified system will have to be created and that can be repeated a number
  of time.
  Each cycle will be slow and expensive.
+ 
 \end_layout
 
 \begin_layout Standard
 A better solution would be a system where domain experts can directly express
  the ontology, they already created for SustenAgro, the formulas, to calculate
  the indexes, and their recommendations in a machine readable format.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -291,18 +294,24 @@ In this paper, we present how the SustenAgro System, a web-based Decision
  the SustenAgro system is capable to automatically generate the application's
  user interface, get answers from logged users, calculate the indexes and
  show graphics and recommendations.
-\end_layout
-
-\begin_layout Standard
-This approach allows a faster development cycle for SustenAgro applications.
- Domain experts have to learn to use the system and its associated DSL,
- but after that they can implement changes immediately (at runtime).
- The DSLs are compact and easy to learn [resultado???].
  
 \end_layout
 
 \begin_layout Standard
-[DESCRICAO DO RESTO do paper]
+This approach allows a faster development cycle for SustenAgro System.
+ Domain experts have to learn to use the system and its associated DSL,
+ but after that they can implement changes immediately (at runtime).
+ The DSLs are compact and easy to learn, generating a tool for supporting
+ the sustainability assessment process in sugarcane production systems.
+ 
+\end_layout
+
+\begin_layout Standard
+This tool was analysed and tested by domain experts concluding that the
+ SustenAgro system allows the re-definition of sustainability domain knowledge
+ represented in the ontology and of the functionalities for generating the
+ visual representation of this decision support system.
+ 
 \end_layout
 
 \begin_layout Section
@@ -313,57 +322,107 @@ Ontologies.
 Ontologies support the representation and organization of knowledge, allowing
  the concepts integration, even when they belong to domains without apparent
  relationship.
- For example in the SustenAgro system was necessary interrelate sustainability
- knowledge with graphical user interfaces knowledge, to support the generation
- of Decision Support Systems (DSS) for sustainability assessment, the model
- knowledge was divided into two ontologies, SustenAgro Ontology and SAD
- ontology.
+ In the SustenAgro system was necessary interrelate sustainability knowledge
+ with graphical user interfaces knowledge, to support the generation of
+ Decision Support Systems (DSS) for sustainability assessment.
+\end_layout
+
+\begin_layout Standard
+Expert knowledge was initially modeled through conceptual maps that facilitate
+ a communication of concepts but increase the steps of modeling process,
+ which was identified the need for a tool for supporting the domain expert's
+ modeling of ontologies.
+\end_layout
+
+\begin_layout Standard
+The development of ontologies were modeled by techniques of rapid prototyping
+ of coverage and increased complexity, starting with the most relevant component
+s of the model to the experts and incorporating each one of the other components
+, these prototypes were validated through questions of expert interests
+ and validate through queries and performs a validation and integration,
+ this cyclical method obtains a prototype in each cycle.
+\end_layout
+
+\begin_layout Standard
+The SustenAgro knowledge representation was divided into two ontologies,
+ SustenAgro Ontology and DSS ontology.
+ 
 \end_layout
 
 \begin_layout Subsection
-SustenAgro Ontology
+SustenAgro Ontology: sustainability assessment
 \end_layout
 
 \begin_layout Standard
-SustenAgro ontology represents the base knowledge to carry out a sustainability
- assessment, it is composed of several fundamental concepts such as Production
- Unit, Indicator, Variable, Value, Microregion, and so forth.
- Which are integrated and related to represent the sustainability assessment
- in sugar-cane domain, below are presented the main concepts of this ontology.
-\end_layout
-
-\begin_layout Standard
-Production Unit concept, represents the organization's that can be evaluated
- by the SustenAgro system to obtain a sustainability measure, currently
- can be sugar-cane providers and / or sugar-cane processing plants, each
- assessment process requires data that defines the Production Units through
- the properties that make up, exits a set of required properties such as:
-\end_layout
-
-\begin_layout Standard
-Name: define the name of the production unit 
-\end_layout
-
-\begin_layout Standard
-Harvest year: define the year of harvest 
-\end_layout
-
-\begin_layout Standard
-Agricultural production system: relates the agricultural production system
- under evaluation.
+SustenAgro ontology represents the base knowledge to perform a sustainability
+ assessment of sugarcane production in Center-South of Brazil, it is composed
+ of several concepts in the agronomic, economic, social, environmental areas.
  
 \end_layout
 
 \begin_layout Standard
-Has microregion: relates the microregion of the production unit 
+The SustenAgro Ontology support concepts that are constantly changing, for
+ example in the process of "sustainability assessment" the indicators and
+ indexes are continuously redefined.
+ 
 \end_layout
 
 \begin_layout Standard
-Has state:relates the Brazilian state 
+The fundamental classes are Production Unit, Indicator, Variable, Value,
+ Microregion, and so forth.
+ Which are integrated and related to represent the domain of sustainability
+ assessment in sugar-cane, below are presented the main classes of this
+ ontology:
+\end_layout
+
+\begin_layout Standard
+Production Unit class, represents the organizations that can be assessed
+ by the SustenAgro system to obtain a sustainability measure, currently
+ they can be sugar-cane providers and / or sugar-cane processing plants,
+ each assessment process requires data that defines the Production Units
+ through the properties that make up them, was defined a set of required
+ properties for the production units: 
+\end_layout
+
+\begin_layout Itemize
+Name: define the name of the production unit
+\end_layout
+
+\begin_layout Itemize
+Harvest year: define the year of harvest
+\end_layout
+
+\begin_layout Itemize
+Agricultural production system: relates the agricultural production system
+ being assessed.
+\end_layout
+
+\begin_layout Itemize
+Has microregion: relates the microregion of the production unit.
+ 
+\end_layout
+
+\begin_layout Itemize
+Has state: relates the Brazilian state.
+\end_layout
+
+\begin_layout Itemize
+Availability of assessment results: relates the type of availability of
+ results.
+\end_layout
+
+\begin_layout Itemize
+Sugarcane source: relates the sugarcane source type
+\end_layout
+
+\begin_layout Standard
+Figure 1 it presents the modeling of Production Unit, accomplished in Protégé
+ 
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -371,7 +430,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename images/ProductionUnit.png
-	scale 60
+	scale 50
 
 \end_inset
 
@@ -382,15 +441,11 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Modelagem Production Unit
+Modeling of Production Unit class
 \end_layout
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -404,13 +459,50 @@ Indicator and Variable classes represents the characteristics of the Production
  Units which will be identified and quantified in each assessment process,
  they have a Value that quantifies them, this property along with other
  conform a format that allows identify and manage such elements.
- Figure 2 presents the modeling of Indicator entitled Absolute Emissions
- Of Greenhouse Gases which presents the relevance annotation and has value
- property which establish the format of an Indicator.
 \end_layout
 
 \begin_layout Standard
-Figure 2 Modeling of Indicator
+Figure 2 presents the modeling of Indicator entitled Absolute Emissions
+ Of Greenhouse Gases which presents the relevance annotation and has value
+ property which establish the format of an Indicator
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/Indicator.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Modeling of Indicator
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -422,11 +514,41 @@ Variable class also presents the features of Production Units which to quantify
 
 \begin_layout Standard
 Figure 3 represents the hierarchical structure of variables and a variable
- Adequacy of boilers which has the two properties described above
+ Adequacy of boilers which has the two properties described above.
 \end_layout
 
 \begin_layout Standard
-Figure 3 Modeling of Variable class
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/Variable.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Modeling of Variable class
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -436,6 +558,7 @@ State and microregion classes represent the places where production units
  7 states that belong to the center-south of Brazil and 243 microregions
  within the registered states, these data were semantically queried and
  integrated in the system from a query on DBpedia.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -444,7 +567,37 @@ Figure 4 represents a modeling of geographic locations used in the SustenAgro
 \end_layout
 
 \begin_layout Standard
-Figure 4 Modeling of Microregion class
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/Microregion.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Modeling of Microregion class
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -458,9 +611,10 @@ From the previous classes was possible to develop the data model in format
 Data and Object properties must have set the rdfs:range to accomplish the
  validation of related classes and some are functional to ensure a relation
  one-to-one.
+ 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subsection
 DSS Ontology
 \end_layout
 
@@ -471,10 +625,19 @@ t processes.
 \end_layout
 
 \begin_layout Standard
-The assessment software systems which were analysed are: SustenAgro system:
- assessment of agricultural sustainability in sugarcane.
- Innova-Tec system: assessment of technological innovation impact.
- Nano-Tec system: assessment of nanotechnological impact.
+The assessment software systems which were analysed are: 
+\end_layout
+
+\begin_layout Enumerate
+SustenAgro system: assessment of agricultural sustainability in sugarcane.
+\end_layout
+
+\begin_layout Enumerate
+Innova-Tec system: assessment of technological innovation impact.
+\end_layout
+
+\begin_layout Enumerate
+Nano-Tec system: assessment of nanotechnological impact.
 \end_layout
 
 \begin_layout Standard
@@ -484,537 +647,215 @@ From these systems were identified common elements, which were abstracted
 \end_layout
 
 \begin_layout Standard
-The identified and modeled classes are: 
+The identified and modeled classes are:
 \end_layout
 
-\begin_layout Section
-Domain Specific Language.
+\begin_layout Itemize
+Evaluation Object: class that represents the objects that will be analyzed
+ in each assessment process, which will be as individuals this class or
+ some subclass of it, in the case of SustenAgro system the Production Unit
+ class is subclass of Evaluation Object
 \end_layout
 
-\begin_layout Section
-Architeture 
+\begin_layout Itemize
+Feature: class that represents the features of an Evaluation Object which
+ will be quantified, analyzed and used in the generation of results of the
+ assessment process, generally the Features have a numeric property that
+ quantify it.
+\end_layout
+
+\begin_layout Itemize
+Analysis: class that links the assessment result, the name and date of assessmen
+t, as well as the Evaluation Object, to represent an assessment 
+\end_layout
+
+\begin_layout Itemize
+Value: class that represents the values that are assigned to each instance
+ of Feature 
+\end_layout
+
+\begin_layout Itemize
+User: class that represents the system users.
+\end_layout
+
+\begin_layout Itemize
+Role: class that represents the user types of the system, relating the permissio
+ns of each type, by default has are instantiated the User and Admin roles.
 \end_layout
 
 \begin_layout Standard
-O problema abordado nesta pesquisa foi o design de uma arquitetura software
- que permita se adaptar e se reconfigurar às mudanças do conhecimento em
- sustentabilidade no sistema produtivo de cana-de-açúcar, suportando a reconfigu
-ração dos modelos de dados e das visualizações deles por meio de interfaces
- gráficas.
+In the figure 5 is presents the basic structure of a DSS, with classes that
+ were derived from the abstraction of Sustenagro ontology.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/DSS ontology.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Abstract modeling of DSS 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The Value class represents the values that are related to each feature of
+ Production Unit, which is divided into Categorical and Real classes, in
+ the SustenAgro case represents the possibles values that an Indicator or
+ Variable may have, the discrete and defined elements as the categorical
+ are modeled as class individuals, thereby enabling, restrict the options
+ to choose from.
+\end_layout
+
+\begin_layout Standard
+Figure 6 presents the Value class and subclasses modeled, so much Categorical
+ for finite set of values and Real for numeric values, as an example is
+ Yes/no Class that represents the yes and no values, which are modeled as
+ individuals of said class.
+\end_layout
+
+\begin_layout Standard
+Each individual of the Value class has the as number property that relates
+ a numeric value for define a comparison criteria and provide a format for
+ such data.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/Value.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Value modeling
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+These classes are complemented with properties as rdfs:range or patterns
+ of data that relate the most appropriate widgets in the representation
+ of information, and thus provide the generation of graphical user interfaces.
+\end_layout
+
+\begin_layout Standard
+SustenAgro Ontology was implemented through semantic web technologies that
+ enable information retrieval systems in linken open data format, through
+ Blazegraph triplestore that supports the SPARQL 1.1 query language.
  
 \end_layout
 
-\begin_layout Standard
-Este problema foi identificado em varias ferramentas software da Embrapa
- Meio Ambiente que precisam ser reconfiguradas às mudanças do domínio de
- conhecimento, no gerenciamento e na apresentação da informação.
-\end_layout
-
-\begin_layout Standard
-Uma característica essencial deste problema é que a informação é complexa
- e muda continuamente.
-\end_layout
-
-\begin_layout Standard
-Tendo em conta a complexidade dos dados do sistema software, foi necessário
- usar um formato de representação de conhecimento que forneça uma estrutura
- bem definida e que seja adaptável às mudanças do domínio, por esta razão
- foi escolhido o formato de ontologias da web semântica, que permite definir,
- organizar, relacionar e inferir conhecimento.
-\end_layout
-
-\begin_layout Standard
-As ontologias fornecem suporte na representação e organização de conhecimento,
- mas na definição de procedimentos e configurações especificas de um sistema
- carece de flexibilidade, pelo que procurou-se uma alternativa para complementar
- as ontologias; identificou-se que uma DSL, fornece o suporte na definição
- de processos, de configurações e de logica computacional.
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename images/Arquitecture.png
-	scale 37
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Arquitetura do sistema
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-A arquitetura desenvolvida tem duas ontologias base, a ontologia de dominio
- dos especialistas que representa o conheçimento sobre sustentabilide como
- são os indicadores da sustentabilidade, dimensões da sutentabilidade, informaçõ
-es geograficas e analyses desenvolvidos, assim como a ontologia de interfaces
- de usuario que fornece o suporte de usuários, os datatypes e o suporte
- das intefaces graficas.
-\end_layout
-
-\begin_layout Standard
-As ontologias estão instanciadas em uma triplestore que dá suporte no armazename
-nto e recuperação das informações para todo o sistema, o usuário administrador
- pode configurar o sistema por meio de uma Domain Specific Language onde
- são apresentadas as instruções de configuração na terminologia do especialista,
- permitindo configurar caracteristicas do sistema como o dados que compoem
- um objeto de avaliação, as formulas da sustentabilidade e as interfaces
- graficas de resultados.
-\end_layout
-
-\begin_layout Standard
-Permitindo fazer mudanças em qualquer momento da execução do sistema.
-\end_layout
-
 \begin_layout Section
-Methodology.
-\end_layout
-
-\begin_layout Standard
-Due to the diversity and the changing nature of the indicators, the construction
- of a methodology for the evaluation sustainability and the requirement
- to have a massive system of data collection, was necessary to analyze the
- technological possibilities to provide an architecture and information
- retrieval system to deal with said requirements.
- It was decided to implement an information retrieval system based on triplestor
-e, which needs the development of an ontology.
-\end_layout
-
-\begin_layout Standard
-The development of ontology is responsive type by techniques of rapid prototypin
-g of coverage and increased complexity, starting with the most relevant
- components of the model to the experts and incorporating each one of the
- other components by validations, this method was cyclical obtaining in
- each prototype cycle.
-\end_layout
-
-\begin_layout Standard
-Among them are the conceptual maps that allow a focused communication in
- the field of specialist, in order to represent knowledge of a visual way
- and we also have the computational models in semantic web formats that
- allow communication with experts in modeling of knowledge.
-\end_layout
-
-\begin_layout Standard
-After having the conceptual model well-defined, modelers represented this
- model in OWL standard, after that the expert built questions that were
- asked in the system, and it generated the expected results, then follows
- a validation phase, integration and adjustment, which ended with a reliable
- prototype that represents an ontology sector, this process will be repeated
- until you have all sectors of interest and the required integrity.
-\end_layout
-
-\begin_layout Standard
-The methodology includes the following steps that will represent the domain
- knowledge, the process corresponds to a cyclical methodology, which will
- be added sectors according to the maturation of the terms and the need
- of the information contained:
-\end_layout
-
-\begin_layout Enumerate
-Definition of entities
-\end_layout
-
-\begin_layout Enumerate
-Definition of ratings
-\end_layout
-
-\begin_layout Enumerate
-Definition of semantic relations
-\end_layout
-
-\begin_layout Enumerate
-Definition the rules and axioms
-\end_layout
-
-\begin_layout Enumerate
-Implementation in OWL
-\end_layout
-
-\begin_layout Enumerate
-Instantiation of individuals
-\end_layout
-
-\begin_layout Enumerate
-Construction of questions
-\end_layout
-
-\begin_layout Enumerate
-Validation through queries
-\end_layout
-
-\begin_layout Enumerate
-Adjustments and integration
-\end_layout
-
-\begin_layout Standard
-This process is not necessarily linear, the modeling can be cyclic and the
- modeladors can return to the previous steps as necessary.
-\end_layout
-
-\begin_layout Standard
-The modules that were addressed in the modeling are, in order of development:
-\end_layout
-
-\begin_layout Enumerate
-Module attributes and data from production plants of sugarcane.
-\end_layout
-
-\begin_layout Enumerate
-Module assessment of sustainability indicators in sugarcane systems.
-\end_layout
-
-\begin_layout Enumerate
-Module representation of sustainability assessment methodology.
-\end_layout
-
-\begin_layout Enumerate
-Module georeferencing connection with the supply of natural resources data.
-\end_layout
-
-\begin_layout Section
-Development and Tests
-\end_layout
-
-\begin_layout Subsection
-Ontologies
-\end_layout
-
-\begin_layout Standard
-SustenAgro Ontology represents the critical concepts in the evaluation of
- sustainability in the production of sugar cane system in the state of Sao
- Paulo, this ontology was developed by a team that includes specialists
- in the area of sustainability in agriculture and experts in semantic web
- technologies, and tries to represent the system by means of sustainability
- indicators, which allow adding, quantify and simplify information about
- complex phenomenon so that trends become more apparent and significant
- in order to improve the process of understanding and communication
-\begin_inset CommandInset citation
-LatexCommand cite
-key "brandao2002introduccao"
-
-\end_inset
-
-.
- According to 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "gallopin1996environmental"
-
-\end_inset
-
- the best indicators are those that simplify relevant information, making
- them clearer the phenomena.
-\end_layout
-
-\begin_layout Standard
-Indicators of SustenAgro ontology, are classified in three dimensions standards
- of sustainability: environmental, social and economic
-\begin_inset CommandInset citation
-LatexCommand cite
-key "alkan2009goal"
-
-\end_inset
-
-; these dimensions are subdivided into smaller compartments called attributes
- for production systems that bring together related identifiers, for example
- the environmental dimension has the soil, water and climate properties.
-\end_layout
-
-\begin_layout Standard
-The dimensions are composed of elements called attributes that classify
- each indicators, also have link with the concept of sustainability value
- for measure the sustainable of indicators in a given production system.
-\end_layout
-
-\begin_layout Standard
-In the conceptual map of Figure 2 can be seen a schematic of the main existing
- concepts in the ontology developed and how the indicator element is the
- center of this model:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename images/PrimeiroMapaConceitual.png
-	lyxscale 15
-	scale 60
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Mapa conceitual da metodologia de desenvolvimento da ontologia
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-The instances of the indicators of ontology will be used by the evaluation
- methodology that will generate sustainability indexes, which will represent
- the sustainability of the agricultural system evaluated.
-\end_layout
-
-\begin_layout Standard
-According to this methodology, has developed a conceptual map that represents
- the concepts and domain relationships and allows communication with the
- experts:
-\end_layout
-
-\begin_layout Standard
-The environmental, economic and social dimensions were divided into attributes
- and indicators such as presents itself in the following figures:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename images/PartePrincipal.png
-	lyxscale 15
-	scale 45
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Mapa conceitual dos conceitos fundamentais
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-These elements can generate the sustainability indices and the efficiency
- index, that are the output of assessment process.
-\end_layout
-
-\begin_layout Standard
-After modeling the phenomenon through the conceptual map, became a translation
- to OWL standard to achieve its interpretation by computers, the following
- images show the model made by Protégé tool.
-\end_layout
-
-\begin_layout Standard
-Figure 4 represents the dimension class in Protege:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename images/Dimensions.png
-	lyxscale 15
-	scale 70
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Classe Dimension
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Figure 5 represents the attribute class in Protege:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename images/Attributes.png
-	lyxscale 15
-	scale 70
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Classe Attribute
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-Re-use of ontologies
-\end_layout
-
-\begin_layout Standard
-Ontologies are formal representations of knowledge that can be reused according
- to the needs of each ontological development in the case of SustenAgro
- Ontology have consulted sources of ontologies in the agricultural sector
- and on the assessment of sustainability, and were selected two developments
- the "Agricultural ontology Service "which is a model for defining ontologies
- for agriculture based on AGROVOC which is a major agricultural vocabularies
- developed by FAO, and the ontology of sustainability evaluation ISD-Economics
- ontology 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "brilhante2006information"
-
-\end_inset
-
- that provides sustainability concepts, and according to research it was
- concluded that there is an ontology that integrates the concepts of sustainabil
-ity assessment in agriculture.
- These two proposals state of the art will be integrated into SustenAgro
- Ontology in the following versions of the ontology, since the goal of this
- first version is the identification and definition of the fundamental concepts
- of sustainability assessment in the production of cane sugar system.
-\end_layout
-
-\begin_layout Subsection
 Domain Specific Language
 \end_layout
 
 \begin_layout Standard
-A administração das ontologias é realizado por meio de um lenguagen specifico
- de dominio destinado para uso dos especialistas em sustenatabilidade que
- permite gerenciar os principais conceitos das ontologias para definir o
- comportamento deles no processo de calculo dos resultados e na apresentação
- da interface grafica, uma visualização deste lenguage é apresentada na
- figura 6.
+Sustenagro system define its functionalities through of a Domain Specific
+ Language based on ontologies, which is focused on the language of sustainabilit
+y experts to be created and edited directly by them, achieves the administration
+ of ontologies and the visual representation of the modeled knowledge, through
+ the following features to flexibly the generation of graphical user interfaces.
 \end_layout
 
 \begin_layout Standard
-Esta linguagem permite:
+The sustainable concepts formulated by the experts are joining with the
+ knowledge of ontology to define an interface of communication between stakehold
+ers and computer systems.
 \end_layout
 
 \begin_layout Standard
-Definir objetos de avaliação: são os elementos que serão evaluados na avaliação,
- no caso de SustenAgro seram as unidades produtivas ou fazendas que vão
- ficar cadastradas no sistema e sobre as quais serão feitas as avaliações,
- a DSL fornece esta funcionalidade por meio do comando evaluationObject
- que recebe a URI da classe que vai ser nesta instrução são definidas as
- propiedades que compõem o objeto de avaliação, para deninir no sistema
- a estrutura do objeto.
+The Features supported by DSL are: 
+\end_layout
+
+\begin_layout Subsection
+Definition of Evaluation Object.
+ 
 \end_layout
 
 \begin_layout Standard
-O algoritmo 1 tem as instruções 
+The evaluationObject command defines the structure of evaluation object
+ and binds the corresponding visual controls, the command requires an URI
+ of the class of elements that will be assessed and each one of related
+ properties.
 \end_layout
 
 \begin_layout Standard
-Instance: define uma propiedade para o objeto de avaliação, essa instrução
- recebe como primeiro parametro a URI da propiedade da ontologia que permite
- mapear a estrutura da propiedade e asism definir o comportamento do objeto
- em relação a dita propiedade definida e um label para usar onde for necessario,
- como é nas interfaces graficas.
+In code 1 presents a part of the DSL which defines the evaluation object
+ class Production Unit and the properties through the instance and type
+ commands.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float algorithm
+placement H
 wide false
 sideways false
 status open
 
 \begin_layout Plain Layout
-evaluationObject ':ProductionUnit', {
+evaluationObject ":ProductionUnit", { 
 \end_layout
 
 \begin_layout Plain Layout
-instance 'ui:hasName', label: "Nome da unidade produtiva ou fazenda"
+	instance "ui:hasName', label: ["en": "Name", "pt": "Nome"] 
 \end_layout
 
 \begin_layout Plain Layout
-instance ':hasAgriculturalProductionSystem', label: "Sistema de produção
- agrícola"
+	instance ":hasAgriculturalProductionSystem" 
 \end_layout
 
 \begin_layout Plain Layout
-type label: "Tipo da unidade produtiva"
+	type label: ["en": "Type", "pt": "Tipo"] 
 \end_layout
 
 \begin_layout Plain Layout
@@ -1025,11 +866,15 @@ type label: "Tipo da unidade produtiva"
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Definição de um objeto de avaliação na DSL
+Definition of Evaluation Object 
 \end_layout
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -1039,27 +884,66 @@ Definição de um objeto de avaliação na DSL
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float figure
+The instance command links a property through its URI and can be complemented
+ by parameters that customise the visual representation of property.
+ The type command links the subclasses of main class, to be assigned in
+ the evaluation object instances, in the SustenAgro system case, said command
+ identifies that the Production Unit instances can also be a Provider or
+ a Plant.
+\end_layout
+
+\begin_layout Standard
+The parameters that can complement the previous command are:
+\end_layout
+
+\begin_layout Itemize
+Label: defines an associate text.
+\end_layout
+
+\begin_layout Itemize
+Placeholder: defines an help text.
+\end_layout
+
+\begin_layout Itemize
+Required: defines a mandatory property.
+\end_layout
+
+\begin_layout Itemize
+Widget: defines a user graphical control.
+\end_layout
+
+\begin_layout Subsection
+Definition of Feature 
+\end_layout
+
+\begin_layout Standard
+The Feature command define the features which will be presented during the
+ evaluation to be instantiated as part of Analysis, it has a argument an
+ URI that allows to link subclasses of the referenced class, the instances
+ of the classes will be quantified by the assessment process, in which it
+ is carried out the property has value that links each Feature through URIs
+ of classes: EnvironmentalIndicator, EconomicIndicator, SocialIndicator,
+ ProductionEfficiencyFeature and TechnologicalEfficiencyFeature.
+ Furthermore is possible to add inlcusion of new features in the user graphical
+ interface through extraFeatures parameter.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
 wide false
 sideways false
 status open
 
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename images/SustenAgro-dsl-editor.png
-	scale 40
-	rotateAngle 90
-
-\end_inset
-
-
+feature ':EnvironmentalIndicator', 'extraFeatures': true
 \end_layout
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-SustenAgro domain Specific Language
+Definition of Features
 \end_layout
 
 \end_inset
@@ -1077,50 +961,67 @@ SustenAgro domain Specific Language
 \end_layout
 
 \begin_layout Subsection
-SustenAgro Software
+Definition of assessment logic
 \end_layout
 
 \begin_layout Standard
-There is a requirement to establish a standard format that define the terms
- used in this area, so that people and computer systems that will use the
- model have access to the concepts involved.
- These concepts are joining the expert knowledge and the knowledge of ontologist
- to define a means of communication between stakeholders and computer systems.
+This DSL functionality define the process to assessment the data and generate
+ relevant information which be presented as the system output, and can be
+ integrated into views and widgets.
+ The assessment logic is supported by the logical and mathematical features
+ of Java and Groovy languages.
 \end_layout
 
 \begin_layout Standard
-To meet the above requirement was decided to implement the SustenAgro Ontology
- through semantic web technologies that enable implement triplestore information
- retrieval systems, taking into account these characteristics was selected
- the Blazegraph triplestore that supports the SPARQL 1.1 query language.
+The report command defines the quantitative treatment that will be made
+ to the Features, with the purpose to obtain general values or standards
+ as result of assessment process, to be presented directly or through widgets
+ to facilitate the representation and understanding of assessment system.
 \end_layout
 
 \begin_layout Standard
-O sistema desenvolvido foi publicado no endereço web http://java.icmc.usp.br:1300/
- como é apresentado na figura 7:
+The following code shows the implementation of the SustenAgro system formula,
+ creating variables result of arithmetic operations to generate general
+ results, in the case of SustenAgro the code generates the sustainability
+ variable that represents the sustainability index.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float figure
+\begin_inset Float algorithm
+placement H
 wide false
 sideways false
 status open
 
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename images/SustenAgro-main.png
-	scale 30
+report {
+\end_layout
 
-\end_inset
+\begin_layout Plain Layout
+	environment = weightedSum(data.':EnvironmentalIndicator') 
+\end_layout
 
+\begin_layout Plain Layout
+	economic = weightedSum(data.':EconomicIndicator') 
+\end_layout
 
+\begin_layout Plain Layout
+	social = weightedSum(data.':SocialIndicator') 
+\end_layout
+
+\begin_layout Plain Layout
+	sustainability = (environment + social + economic)/3 
+\end_layout
+
+\begin_layout Plain Layout
+} 
 \end_layout
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Tela inicial de sustenagro
+Definition of assessment logic
 \end_layout
 
 \end_inset
@@ -1128,130 +1029,62 @@ Tela inicial de sustenagro
 
 \end_layout
 
+\begin_layout Plain Layout
+
+\end_layout
+
 \end_inset
 
 
 \end_layout
 
-\begin_layout Standard
-Nesta tela o usuário pode ver a informação geral do aplicativo, criar uma
- nova conta de usuário ou ingresar ao sistema com os dados de usuario.
+\begin_layout Subsection
+Definition of the GUI of the report
 \end_layout
 
 \begin_layout Standard
-A partir do ingreso o usuário pode seleccionar o menu avaliação e escolher
- entre cadastrar uma nova unidade produtiva ou realizar uma avaliação de
- sustentabilidade, como é apresentado na tela da figura 8.
- 
+The report command also defines the widgets that make up the visual part
+ of the report, which may use the result variables of assessment logic as
+ the widgets input, to improve the representation and facilitate the understandi
+ng of results.
+ In the following code presents an example of use this feature in SustenAgro
+ System, in which commands are set to generate the graphical user interfaces,
+ as sustainabilityMatrix that uses variables as arguments.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float figure
+\begin_inset Float algorithm
+placement H
 wide false
 sideways false
 status open
 
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename images/SustenAgro-tool.png
-	scale 40
+report { 
+\end_layout
 
-\end_inset
+\begin_layout Plain Layout
+	evaluationObjectInfo() 
+\end_layout
 
+\begin_layout Plain Layout
+	sustainabilityMatrix x: sustainability, y: efficiency text 'en': 'Microregion
+ map', 'pt': 'Mapa da microregião' 
+\end_layout
 
+\begin_layout Plain Layout
+	map data.'Microregion'
+\end_layout
+
+\begin_layout Plain Layout
+}
 \end_layout
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Cadastro de nova unidade produtiva/Fazenda
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Uma vez cadastrada a unidade produtiva/fazenda disponibiliza-se a opção
- de criar nova avaliação, ação que vai gerar a tela da figura 9 que permite
- visualizar as variaveis de eficiencia e os indicadores para que os usuários
- preencham cada uma segundo a realidade da unidade produtiva em avaliação,
- cada indicador ou variavel de eficiencia tem varias opções que estão ligadas
- a valores que quantificam a sustentabilidade, esses valores estão definidos
- na ontologia da sustentabilidade e serao os valores de ingreso para a formula
- que vai gerar os indices da sustentabilidade.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename images/SustenAgro-scenario.png
-	scale 30
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Cadastro das variaveis/indicadores
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-A partir desses desses dados cadastrados são gerados os resultados do sistema
- que consistem na planilha de ediciência e custo, na planilha da sustentabilidad
-e e o relatorio do sistema, as planilhas permitem a visualizar os atributos
- das variveis de eficiência e dos indicadores e a tela de relatorio que
- apresenta a matrix de avaliação onde são relaciondas as variaveis de eficiência
- e de sustentabilidade, o relatio é apresentado na figura 10.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename images/SustenAgro-analyses.png
-	scale 35
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Formato das planilhas de resultado
+Definition of visual controls of report 
 \end_layout
 
 \end_inset
@@ -1269,336 +1102,175 @@ Formato das planilhas de resultado
 \end_layout
 
 \begin_layout Section
-Related work
+Architecture
 \end_layout
 
 \begin_layout Standard
-Sustainable Development in this context, is the base to serve the present
- needs without compromise the future generations to supplement their needs
-\begin_inset CommandInset citation
-LatexCommand cite
-key "brundtland1987our"
+The use of semantic web ontologies was necessary to represent and organize
+ the knowledge and so provides a well-defined structure adaptable to changes,
+ however the ontologies lack flexibility to define specific procedures and
+ settings.
+ Whereby the alternative found to meet this gap is the use of a Domain Specific
+ Language based on ontologies.
+\end_layout
+
+\begin_layout Standard
+The developed architecture has two ontologies base:
+\end_layout
+
+\begin_layout Enumerate
+SustenAgro ontology has the knowledge representation of production units,
+ sustainability indicators, sustainability variables, sustainability index,
+ analyzes and geographical information.
+\end_layout
+
+\begin_layout Enumerate
+DSS ontology contains the main concepts for support the assessment process
+ and provides datatypes mapping and support graphical user interfaces.
+\end_layout
+
+\begin_layout Standard
+Ontologies are instantiated in a triplestore that supports the storage and
+ retrieval of information for the entire system.
+ The expert user has access to system configuration through DSLs in which
+ are presented according to terminology setup instructions used by the expert
+ domain, allowing you to configure system features such as the data that
+ make up an object of evaluation, the formulas of sustainability and graphic
+ interfaces to present the results.
+ Thus, the ‘manager-domain expert’ is able to make changes at any time the
+ system is running.
+\end_layout
+
+\begin_layout Standard
+Figure 7 represents the architecture of SustenAgro System, which is based
+ on the ontologies and configured by expert users through of the DSL, to
+ configure the automatic generating the views for end users.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/SustenAgro Arquitecture final.png
+	scale 50
 
 \end_inset
 
 
 \end_layout
 
-\begin_layout Subsection
-Agricultural Area
-\end_layout
+\begin_layout Plain Layout
+\begin_inset Caption Standard
 
-\begin_layout Standard
-This part describes the pappers that were relevant to the knowledge in agricultu
-re.
-\end_layout
-
-\begin_layout Standard
-It is necessary for a standardized ontology using techniques which make
- it multilingual so that it can be used without the need for adjustments
- to researchers from anywhere.
-\end_layout
-
-\begin_layout Standard
-The papper
-\begin_inset CommandInset citation
-LatexCommand cite
-key "lauser2006agrovoc"
-
-\end_inset
-
- describes a technique that uses the AGROVOC multilingual Theasaurus for
- conversion into an ontology and also covers the concepts of agriculture
- that are a focus of the work, so we analyzed the techniques used to adapt
- to our ontology.
-\end_layout
-
-\begin_layout Subsection
-Sustainability Area
-\end_layout
-
-\begin_layout Standard
-This part describes the pappers that were relevant to the knowledge in the
- area of sustainability.
-\end_layout
-
-\begin_layout Standard
-For evaluation of sustainability requires working with indicators that measure
- how each practice is sustainable.
- In the paper
-\begin_inset CommandInset citation
-LatexCommand cite
-key "brilhante2006information"
-
-\end_inset
-
- describes an sustainable analysis framework of Amazonas state and is developed
- an ontology of these indicators that work in conjunction with the framework.
- The last foundation for this work was extremely important for the development
- done.
- Our ontology is based on agricultural system, the focus on sustainability
- help to amplify the knowledge and how to make it computational.
-\end_layout
-
-\begin_layout Standard
-The ontology must be flexible to some extent to accept changes according
- to the need of the specialist.
- The concepts presented by
-\begin_inset CommandInset citation
-LatexCommand cite
-key "kraines2011system"
-
-\end_inset
-
- gave an idea of how to make flexible ontology in the area of sustainability
- so that it can support new concepts and still not miss the formality or
- allow the ambiguous concepts.
- In this way, we adapt this concepts and make it in ours.
-\end_layout
-
-\begin_layout Standard
-To describe the sustainability of a clearer and adaptively is important
- to understand several indicators that are used in several different places.
-\begin_inset CommandInset citation
-LatexCommand cite
-key "wilson2007contrasting"
-
-\end_inset
-
- makes a comparison between sustainability indicators going through in most
- of it, analyzing global metrics and interpreting sustainability among nations,
- through a clear notion of sustainability to support knowledge used in the
- ontology.
+\begin_layout Plain Layout
+SustenAgro System Architecture.
  
 \end_layout
 
-\begin_layout Subsection
-Ontologies Area
+\end_inset
+
+
 \end_layout
 
-\begin_layout Standard
-In this part of the pappers that were relevant to the knowledge in the area
- of development of ontologies in general are described.
-\end_layout
+\begin_layout Plain Layout
 
-\begin_layout Standard
-For a good ontology is important that the concepts are well defined and
- for this and necessary to use techniques to detect semantic conflicts.
-\begin_inset CommandInset citation
-LatexCommand cite
-key "alcaraz2010detection"
+\end_layout
 
 \end_inset
 
- defines how to assemble senarios in order to detect conflicts or problems
- that may have been made in the creation of ontology, the techniques described
- can be considered as a kind of reasoning that detects situations that was
- not explicit in the ontology.
- With this and other pappers related to sustainability we can disambiguate
- and ensure the concepts are consistent and follow the expert needs.
+
 \end_layout
 
 \begin_layout Standard
-For development of an ontology is important to understand the concepts involved
- and needs to create an ontology.
-\begin_inset CommandInset citation
-LatexCommand cite
-key "wen2007event"
-
-\end_inset
-
- describes about ontologies in computer science and generalized terms that
- are needed for development of ontologies, these terms were extremely important
- for all stages of creation and analysis of ontology.
- We do patterns in links between classes to try make more consistent the
- ontology.
-\end_layout
-
-\begin_layout Subsection
-Conceptual basis of ontology
+SustenAgro system was modularized on elements with defined functionality,
+ the main components are the ontologies and DSL defined above, however there
+ are other elements which provide features for the system flexibility and
+ the graphical user interface generation, these elements are: 
 \end_layout
 
 \begin_layout Standard
-\begin_inset CommandInset citation
-LatexCommand cite
-key "brunooliveira2013"
-
-\end_inset
-
- was taken as the basis of knowledge and was chosen by the domain expert.
- Was taken all the knowledge base that was used as the indicators and the
- needs of each and still had part of integrated sustainability directly
- with the part of agriculture geared to the location of the state of São
- Paulo.
- It was analyzed with all the parts described in the dissertation by selecting
- indicators previously validated by a group of experts.
+Ontology Editor: web text editor based on YAML format for provide human-readable
+ syntax to define classes, properties and individuals of ontologies, allow
+ users to create and edit ontologies in real-time, providing the update
+ functionality of critical knowledge which is still in construction such
+ as sustainability indicators.
  
 \end_layout
 
-\begin_layout Subsection
-Related Technologies
+\begin_layout Standard
+DSL Editor: web text editor based on expert domain knowledge to define evaluatio
+n objects, features, assessment logic and GUIs mapping, allows users to
+ create and edit DSL in real-time.
 \end_layout
 
 \begin_layout Standard
-In order to eliminate ambiguity in semantic understanding and making mining
- the relationship between the concepts of knowledge in agriculture, should
- be combined with the knowledge among heterogeneous databases.
+Widgets: The system has a collection of generic widgets for support the
+ generation of UI views, which can have mandatory inputs to allow its instantiat
+ion.
+ 
 \end_layout
 
 \begin_layout Standard
-It proposes a Agricultural Knowledge Grid
-\begin_inset CommandInset citation
-LatexCommand cite
-key "cuiping2013agricultural"
+Views: The system has a set of UI views which make use of the widgets for
+ define the rendering of each view of the generated web application.
+\end_layout
+
+\begin_layout Standard
+Figure 8 shows the rendering of the view “Production Unit” which is the
+ result of the UI generation process presented in the architecture definition,
+ this rendering starts with the ontology definitions, then is complemented
+ with the DSL specification and is send as input to the view for automatic
+ generating of GUI.
+\end_layout
+
+\begin_layout Standard
+This view shows the SustenAgro report and the Sustainability Matrix widget,
+ which were generated through the data flow described in the architecture,
+ using the ontologies, dsl and views in the generation of report with contains
+ the assessment results.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/SustenAgro-report.png
+	scale 50
 
 \end_inset
 
- which was built with three layers "Resource Layer", "Semantic Layer" and
- "User Layer", has been applied to "Semantic Extension on Retrieval", "Knowledge
- links" and "Experience" to deepen "Agricultural Knowledge Services".
+
 \end_layout
 
-\begin_layout Standard
-AGROVOC is a controlled vocabulary that covers all areas of interest FAO
- and consists of 32,000 concepts available in 21 languages, this tool is
- used by researchers, librarians and information managers to index, retrieve
- and organize data in agricultural information systems.
-\end_layout
+\begin_layout Plain Layout
+\begin_inset Caption Standard
 
-\begin_layout Standard
-\begin_inset CommandInset citation
-LatexCommand cite
-key "lauser2006agrovoc"
+\begin_layout Plain Layout
+SustenAgro report view
+\end_layout
 
 \end_inset
 
- is an initiative that serves as a reference in structuring and standardization
- of agricultural terminology in multiple languages for use systems in agricultur
-e, the purpose of this technology is to achieve more interoperability between
- agricultural systems.
+
 \end_layout
 
-\begin_layout Section
-Results and Discussion
-\end_layout
+\end_inset
 
-\begin_layout Standard
-Among the results of this research we can emphasize the development of the
- conceptual map which established a means of communication between domain
- experts and specialists of ontologies, thus achieving the implementation
- of the concepts of ontology in computer language.
+
 \end_layout
 
 \begin_layout Standard
-This approach was chosen because it better fit into the context where it
- was being developed.
- Experts in the field of sustainability had not domain in ontology development
- tools and so would be costly teach them about it, making the conceptual
- map a more common means of communication throughout the team and when in
- the ontology needs experts knowledge they were introduced the necessary
- tools.
-\end_layout
-
-\begin_layout Standard
-SustenAgro Ontology is the most relevant results in computational terms
- because it allows represent the expert's knowledge in a standard modeling
- elements, relations, axioms and rules of the modeled system, this representatio
-n is flexible to change that is needed in this project since the domain
- is still in construction also supports information retrieval technologies.
-\end_layout
-
-\begin_layout Standard
-This ontology was developed using OWL-DL.
- This was selected because it is a language created to define ontologies
- on the Web and also for a better understanding of the team that developed.
- Since there was a need for a data recovery system, it was essential that
- the ontology could adapt the semantic web technologies to optimize processes
- and adapt to the reality of sustainability.
-\end_layout
-
-\begin_layout Standard
-In addition to the ontology and the conceptual map the ontology was also
- adapted into a data recovery system type triplestore, which is the system
- used in the semantic web.
- Was chosen this type of system because besides the team's expertise in
- the technology, sustainability in itself already has some semantic baggage,
- which introduced into a scope own optimizes the analysis of sustainable
- processes and can communicate with other data systems, providing a greater
- range of concepts and analyzes.
-\end_layout
-
-\begin_layout Standard
-This base was made through the triplestore Parliament, this was already
- pre-configured on a server facilitating own use.
- The ontology was adapted to it and so tests were made based on data collected
- by experts to investigate the completeness and consistency of this ontology.
-\end_layout
-
-\begin_layout Standard
-For the evaluation of ontology were made consultations with experts to create
- them questions (paths), to answer certain concepts to see if this ontology
- was adjusting the nature of the data and that the very experts expected
- the ontology.
-\end_layout
-
-\begin_layout Standard
-After this evaluation some adjustments were made to fix some flaws that
- had and to generally optimize the ontology.
- 
-\end_layout
-
-\begin_layout Section
-Discussion
-\end_layout
-
-\begin_layout Standard
-One of the difficulties in modeling both the concept map as the ontology
- is to reach a consensus of critical concepts, which are the binding more
- than one area of expertise, for example in the modeling of the interface
- elements as the elements between the indicators and the assessment methodology,
- or between the elements of the plant variables and indicators, this is
- natural as each expert has a different view of the phenomenon.
-\end_layout
-
-\begin_layout Standard
-Another difficulty is that the semantic web technologies for knowledge represent
-ation are under development, which leads to incompatibilities of the various
- technologies, for example in the development of information retrieval system
- there are no software components that facilitate communication with the
- server part frameworks.
- And to validate this ontology, the experts have some difficult to define
- how the ontology have to work in some places to make the validation complete
- and make the ontology more reliable at the concepts.
- 
-\end_layout
-
-\begin_layout Section
-Conclusions
-\end_layout
-
-\begin_layout Standard
-In defining the models must define what the purpose of it, which will guiding
- each of the discussions that arise when modeling is a complex phenomenon
- that can be interpreted in different ways by the experts.
-\end_layout
-
-\begin_layout Standard
-As to the technological development is important to note that the semantic
- web storage technologies provide more functionality beyond the information
- retrieval, so it is reasonable that the efficiency is lower in this case
- is necessary to assess the requirements and determine the most coherent
- architecture , which can be hybrid architecture.
-\end_layout
-
-\begin_layout Standard
-Its important to define how the evaluation techniques will be used, because
- without a good validation, all of the methods may be invalid if it’s not
- have a validation well defined.
- 
-\shape italic
-(é importante para definir como serão utilizadas as técnicas de avaliação,
- porque sem uma boa validação, todos os métodos podem ser inválidos, se
- não é têm uma validação bem definida.) 
+The SustenAgro system were published in the web address http://java.icmc.usp.br:130
+0/ 
 \end_layout
 
 \begin_layout Standard
