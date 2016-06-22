@@ -240,8 +240,15 @@ ty in sugarcane.
  They try to synthesise information about critical aspects of an agricultural
  production system.
  The scientific basis for the creation of SustenAgro's indicators was research,
- carried out by Embrapa Environment, to identify and define sustainability
- indicators for sugarcane production units (farms and production plants).
+ carried out by Embrapa Environment
+\begin_inset CommandInset citation
+LatexCommand cite
+key "brunooliveira2013"
+
+\end_inset
+
+, to identify and define sustainability indicators for sugarcane production
+ units (farms and production plants).
  Indicators have values, generally categorical, to indicate their status.
  For instance, such as biodiversity, soil fertility, water resources, among
  others.
@@ -1149,6 +1156,7 @@ Figure 7 represents the architecture of SustenAgro System, which is based
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -1183,6 +1191,427 @@ SustenAgro System Architecture.
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+SustenAgro system was modularized on elements with defined functionality,
+ the main components are the ontologies and DSL defined above, however there
+ are other elements which provide features for the system flexibility and
+ the graphical user interface generation, these elements are: 
+\end_layout
+
+\begin_layout Standard
+Ontology Editor: web text editor based on YAML format for provide human-readable
+ syntax to define classes, properties and individuals of ontologies, allow
+ users to create and edit ontologies in real-time, providing the update
+ functionality of critical knowledge which is still in construction such
+ as sustainability indicators.
+ 
+\end_layout
+
+\begin_layout Standard
+DSL Editor: web text editor based on expert domain knowledge to define evaluatio
+n objects, features, assessment logic and GUIs mapping, allows users to
+ create and edit DSL in real-time.
+\end_layout
+
+\begin_layout Standard
+Widgets: The system has a collection of generic widgets for support the
+ generation of UI views, which can have mandatory inputs to allow its instantiat
+ion.
+ 
+\end_layout
+
+\begin_layout Standard
+Views: The system has a set of UI views which make use of the widgets for
+ define the rendering of each view of the generated web application.
+\end_layout
+
+\begin_layout Standard
+Figure 8 shows the rendering of the view “Production Unit” which is the
+ result of the UI generation process presented in the architecture definition,
+ this rendering starts with the ontology definitions, then is complemented
+ with the DSL specification and is send as input to the view for automatic
+ generating of GUI.
+\end_layout
+
+\begin_layout Standard
+This view shows the SustenAgro report and the Sustainability Matrix widget,
+ which were generated through the data flow described in the architecture,
+ using the ontologies, dsl and views in the generation of report with contains
+ the assessment results.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/SustenAgro-report.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+SustenAgro report view
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The SustenAgro system were published in the web address http://java.icmc.usp.br:130
+0/ 
+\end_layout
+
+\begin_layout Section
+Related work
+\end_layout
+
+\begin_layout Standard
+The related work is classified and described in the following knowledge
+ areas.
+\end_layout
+
+\begin_layout Subsection
+Agricultural
+\end_layout
+
+\begin_layout Standard
+Lauser et.
+ al 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "lauser2006agrovoc"
+
+\end_inset
+
+ describes a technique that uses the AGROVOC multilingual Theasaurus for
+ conversion into an ontology service and also covers the concepts of agriculture
+ that are a focus of the work, so we analyzed the techniques used to adapt
+ to our ontology.
+\end_layout
+
+\begin_layout Subsection
+Sustainability
+\end_layout
+
+\begin_layout Standard
+There are several ways to assets the sustainability, in the SustenAgro method
+ are used the indicators for execute the assessment, the definition of the
+ accurate indicators was an essential task for arguing the assessment results.
+ 
+\end_layout
+
+\begin_layout Standard
+There are similar research as Brilhante, V et al 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "brilhante2006information"
+
+\end_inset
+
+ that describes an sustainable analysis framework based in indicators of
+ Amazonas state and is developed an ontology of these indicators that work
+ in conjunction with the framework.
+\end_layout
+
+\begin_layout Standard
+The concepts presented by Kraines et al
+\begin_inset CommandInset citation
+LatexCommand cite
+key "kraines2011system"
+
+\end_inset
+
+ gave an idea of how to make a flexible ontology in the area of sustainability.
+\end_layout
+
+\begin_layout Standard
+The information resources used in the sustainability assessment were the
+ the SustenAgro Method
+\begin_inset CommandInset citation
+LatexCommand cite
+key "brunooliveira2013"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Ontologies Area
+\end_layout
+
+\begin_layout Standard
+In this part of the paper that were relevant to the knowledge in the area
+ of development of ontologies in general are described.
+\end_layout
+
+\begin_layout Standard
+For a good ontology is important that the concepts are well defined and
+ for this and necessary to use techniques to detect semantic conflicts.
+ Alcaraz et al.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "alcaraz2010detection"
+
+\end_inset
+
+ defines how to assemble scenarios in order to detect conflicts or problems
+ that may have been made in the creation of ontology, the techniques described
+ can be considered as a kind of reasoning that detects situations that was
+ not explicit in the ontology.
+ With this and other papers related to sustainability we can disambiguate
+ and ensure the concepts are consistent and follow the expert needs.
+\end_layout
+
+\begin_layout Standard
+For development of an ontology is important to understand the concepts involved
+ and needs to create an ontology.
+ Wen et al.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "wen2007event"
+
+\end_inset
+
+ describes about ontologies in computer science and generalized terms that
+ are needed for development of ontologies, these terms were extremely important
+ for all stages of creation and analysis of ontology.
+ We do patterns in links between classes to try make more consistent the
+ ontology.
+\end_layout
+
+\begin_layout Standard
+SustenAgro Ontology have consulted sources of ontologies in the agricultural
+ sector and on the assessment of sustainability.
+ It was chosen two developments the "Agricultural ontology Service "which
+ is a model for defining ontologies for agriculture based on AGROVOC which
+ is a major agricultural vocabularies developed by FAO and the ontology
+ of sustainability evaluation ISD-Economics ontology 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "brilhante2006information"
+
+\end_inset
+
+ that provides sustainability concepts.
+ According with this research it was concluded that there is an ontology
+ that integrates the concepts of sustainability assessment in agriculture.
+ These two proposals state of the art will be integrated into SustenAgro
+ Ontology in the following versions of the ontology, since the goal of this
+ first version is the identification and definition of the fundamental concepts
+ of sustainability assessment in the production of sugarcane system.
+\end_layout
+
+\begin_layout Subsection
+Conceptual basis of ontology
+\end_layout
+
+\begin_layout Standard
+Oliveira 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "brunooliveira2013"
+
+\end_inset
+
+ was taken as the basis of knowledge and was chosen by the domain expert.
+ Was taken all the knowledge base that was used as the indicators and the
+ needs of each and still had part of integrated sustainability directly
+ with the part of agriculture geared to the location of the Center-South
+ of Brazil.
+ It was analyzed with all the parts described in the dissertation by selecting
+ indicators previously validated by a group of experts.
+\end_layout
+
+\begin_layout Subsection
+Related Technologies
+\end_layout
+
+\begin_layout Standard
+In order to eliminate ambiguity in semantic understanding and making mining
+ the relationship between the concepts of knowledge in agriculture, should
+ be combined with the knowledge among heterogeneous databases.
+\end_layout
+
+\begin_layout Standard
+It proposes a Agricultural Knowledge Grid[cuiping2013agricultural] which
+ was built with three layers "Resource Layer", "Semantic Layer" and "User
+ Layer", has been applied to "Semantic Extension on Retrieval", "Knowledge
+ links" and "Experience" to deepen "Agricultural Knowledge Services".
+\end_layout
+
+\begin_layout Standard
+AGROVOC is a controlled vocabulary that covers all areas of interest FAO
+ and consists of 32,000 concepts available in 21 languages, this tool is
+ used by researchers, librarians and information managers to index, retrieve
+ and organize data in agricultural information systems.
+ [lauser2006agrovoc] is an initiative that serves as a reference in structuring
+ and standardization of agricultural terminology in multiple languages for
+ use systems in agriculture, the purpose of this technology is to achieve
+ more interoperability between agricultural systems.
+\end_layout
+
+\begin_layout Section
+Results
+\end_layout
+
+\begin_layout Standard
+This system demonstrates how the integration of ontologies and dsl allows
+ the definition of decision support systems that are adaptable to domain
+ changes, the main result was the design of a method for creating and editing
+ in real time DSS based on semantic technologies
+\end_layout
+
+\begin_layout Standard
+The products of this project are the sustainablity assessment ontology,
+ the DSL and the SustenAgro System
+\end_layout
+
+\begin_layout Standard
+.
+\end_layout
+
+\begin_layout Standard
+Among the results of this research we can emphasize the development of the
+ conceptual map which established a means of communication between domain
+ experts and specialists of ontologies, thus achieving the implementation
+ of the concepts of ontology in computer language.
+\end_layout
+
+\begin_layout Standard
+This approach was chosen because it better fit into the context where it
+ was being developed.
+ Experts in the field of sustainability had not domain in ontology development
+ tools and so would be costly teach them about it, making the conceptual
+ map a more common means of communication throughout the team and when in
+ the ontology needs experts knowledge they were introduced the necessary
+ tools.
+\end_layout
+
+\begin_layout Standard
+SustenAgro Ontology is the most relevant results in computational terms
+ because it allows represent the expert's knowledge in a standard modeling
+ elements, relations, axioms and rules of the modeled system, this representatio
+n is flexible to change that is needed in this project since the domain
+ is still in construction also supports information retrieval technologies.
+ This ontology was developed using RDF.
+ This was selected because it is a language created to define ontologies
+ on the Web and also for a better understanding of the team that developed.
+ Since there was a need for a data recovery system, it was essential that
+ the ontology could adapt the semantic web technologies to optimize processes
+ and adapt to the reality of sustainability.
+\end_layout
+
+\begin_layout Standard
+In addition to the ontology and the conceptual map the ontology was also
+ adapted into a data recovery system type triplestore, which is the system
+ used in the semantic web.
+ Was chosen this type of system because besides the team's expertise in
+ the technology, sustainability in itself already has some semantic baggage,
+ which introduced into a scope own optimizes the analysis of sustainable
+ processes and can communicate with other data systems, providing a greater
+ range of concepts and analyzes.
+\end_layout
+
+\begin_layout Standard
+This base was made through the triplestore Blazegraph, this was already
+ pre-configured on a server facilitating own use.
+ The ontology was adapted to it and so tests were made based on data collected
+ by experts to investigate the completeness and consistency of this ontology.
+ For the evaluation of ontology were made consultations with experts to
+ create them questions (paths), to answer certain concepts to see if this
+ ontology was adjusting the nature of the data and that the very experts
+ expected the ontology.
+\end_layout
+
+\begin_layout Standard
+After this evaluation some adjustments were made to fix some flaws that
+ had and to generally optimize the ontology.
+\end_layout
+
+\begin_layout Section
+Discussion
+\end_layout
+
+\begin_layout Standard
+The problem addressed in this research was the design of a software architecture
+ which allows to define and manage the sustainability assessment knowledge
+ and graphical user interfaces.
+\end_layout
+
+\begin_layout Standard
+This problem was identified in several software tools of Embrapa Environment,
+ that need to be reconfigured to changing field of knowledge, supporting
+ the reconfiguration of the data models and their graphical users interfaces
+ management and presentation of information.
+\end_layout
+
+\begin_layout Standard
+One of the difficulties in modeling both the concept map as the ontology
+ is to reach a consensus of critical concepts, which are the binding more
+ than one area of expertise, for example in the modeling of the interface
+ elements as the elements between the indicators and the assessment methodology,
+ or between the elements of the plant variables and indicators, this is
+ natural as each expert has a different view of the phenomenon.
+\end_layout
+
+\begin_layout Standard
+Another difficulty is that the semantic web technologies for knowledge represent
+ation are under development, which leads to incompatibilities of the various
+ technologies, for example in the development of information retrieval system
+ there are no software components that facilitate communication with the
+ server part frameworks.
+ And to validate this ontology, the experts have some difficult to define
+ how the ontology have to work in some places to make the validation complete
+ and make the ontology more reliable at the concepts.
+ 
+\end_layout
+
+\begin_layout Section
+Conclusions
+\end_layout
+
+\begin_layout Standard
+In defining the models must define what the purpose of it, which will guiding
+ each of the discussions that arise when modeling is a complex phenomenon
+ that can be interpreted in different ways by the experts.
+\end_layout
+
+\begin_layout Standard
+As to the technological development is important to note that the semantic
+ web storage technologies provide more functionality beyond the information
+ retrieval, so it is reasonable that the efficiency is lower in this case
+ is necessary to assess the requirements and determine the most coherent
+ architecture , which can be hybrid architecture.
+\end_layout
+
+\begin_layout Standard
+Its important to define how the evaluation techniques will be used, because
+ without a good validation, all of the methods may be invalid if it’s not
+ have a validation well defined.
 \end_layout
 
 \begin_layout Standard
